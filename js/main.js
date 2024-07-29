@@ -82,6 +82,15 @@ const app = Vue.createApp({
     })
   },
   mounted () {
+    var s = skrollr.init({
+      forceHeight: false,
+      smoothScrolling : true,
+      smoothScrollingDuration: 1000,
+      render: function(data) {
+        //Log the current scroll position.
+        console.log(data.curTop);
+      }
+    });
     window.addEventListener('scroll', this.handleScroll, true);
     this.render();
   },
