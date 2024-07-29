@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="utf-8" />
+    <title>近期店面發展 | Rinskings 芸蒔刻｜鮮果製茶園</title>
+    <meta name="author" content="Rinskings" />
+    <meta name="description" content="改變你對水果茶的定義" />
+    <meta name="keywords" content="Rinskings, 芸蒔刻, 水果茶, 果汁, 冰沙, 新鮮現榨, 原汁, 審計新村, 審計新村必買, 審計新村推薦, 飲料, 飲品, 外送, 菜單, 飲料外送, 大量, 季節限定, 嚴選, 純粹" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/Rinskings/images/favicon.ico" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script>
+  const mixins = {};
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/Rinskings/css/fontawesome/css/all.min.css"/>
+<link rel="stylesheet" href="/Rinskings/css/main.css" />
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div id="layout">
+      <transition name="fade">
+        <div id="loading" v-show="loading">
+  <div class="loadingImg">
+    <svg version="1.1" id="loadingBg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 192.9 320.2" style="enable-background: new 0 0 192.9 320.2;" xml:space="preserve">
+      <g id="back-line">
+        <g>
+          <path class="st0" d="M187.9,293.5c-10.5,14.7-47.4,25.5-91.4,25.5c-44.5,0-81.8-11.1-91.8-26"></path>
+          <path class="st0" d="M4.7,294c-1.7-2.6-2.6-5.2-2.6-8c0-18.8,42.3-34,94.4-34s94.4,15.2,94.4,34c0,2.9-1,5.8-3,8.5"></path>
+          <g>
+            <path class="st1" d="M96.6,266.9c44.5,0,81.8,11.1,91.8,26c1.7-2.6,2.6-5.2,2.6-8c0-18.8-42.3-34-94.4-34s-94.4,15.2-94.4,34 c0,2.8,0.9,5.4,2.6,8C14.8,278,52.1,266.9,96.6,266.9z"></path>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <div class="shadow"></div>
+    <img src="/Rinskings/images/loading.gif" />
+    <svg version="1.1" id="loadingBgFront" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 192.9 320.2" style="enable-background: new 0 0 192.9 320.2;" xml:space="preserve">
+      <g id="background">
+        <path class="st4" d="M187.3,295.1c-11.2,14.3-47.6,24.7-90.8,24.7c-43.2,0-79.7-10.5-90.9-24.7h-5.8v28h192.9v-28H187.3z"></path>
+      </g>
+      <g id="front-line">
+        <path class="st5" d="M187.9,293.5c-10.5,14.7-47.4,25.5-91.4,25.5c-44.5,0-81.8-11.1-91.8-26"></path>
+      </g>
+    </svg>
+  </div>
+  <div class="loadingText">
+    <span>L</span>
+    <span>o</span>
+    <span>a</span>
+    <span>d</span>
+    <span>i</span>
+    <span>n</span>
+    <span>g</span>
+  </div>
+</div>
+      </transition>
+      <div id="menu" :class="{ scroll: hiddenMenu, 'menuColor': menuColor}">
+  <nav id="desktopMenu">
+    <a class="logo" href="/Rinskings/">
+      <span>RINSKINGS 芸蒔刻｜鮮果製茶園</span>
+    </a>
+    <div class="menu">
+      
+        <a href="/Rinskings/" :class="{ active: currentPath == '' }">最新消息</a>
+      
+        <a href="/Rinskings/brand" :class="{ active: currentPath == 'brand' }">品牌故事</a>
+      
+        <a href="/Rinskings/menu" :class="{ active: currentPath == 'menu' }">飲品菜單</a>
+      
+        <a href="/Rinskings/ingredients" :class="{ active: currentPath == 'ingredients' }">嚴選食材</a>
+      
+        <a href="/Rinskings/stores" :class="{ active: currentPath == 'stores' }">門市資訊</a>
+      
+        <a href="/Rinskings/contact" :class="{ active: currentPath == 'contact' }">聯絡我們</a>
+      
+      <a class="panda" href="https://www.foodpanda.com.tw/restaurant/tz7z/rinskingsyun-shi-ke-xian-guo-zhi-cha-yuan" target="_blank">
+        <div class="img"></div>
+      </a>
+      <a class="uberEat" href="https://www.ubereats.com/tw/store/rinskings%E8%8A%B8%E8%92%94%E5%88%BB-%E9%AE%AE%E6%9E%9C%E8%A3%BD%E8%8C%B6%E5%9C%92/yPl-wBcHUAW8X6TiKiknpA?ps=1" target="_blank">
+        <div class="img"></div>
+      </a>
+    </div>
+  </nav>
+  <nav id="mobileMenu">
+    <div class="title container">
+      <a class="logo" href="/Rinskings/">
+        <span>RINSKINGS 芸蒔刻｜鮮果製茶園</span>
+      </a>
+      <div class="hamburger" :class="{ active: showMenuItems }" @click="showMenuItems = !showMenuItems">
+        <div class="hamburgerBox">
+          <div class="hamburgerInner"></div>
+        </div>
+      </div>
+    </div>
+    <transition name="slide">
+      <div class="menu" v-show="showMenuItems">
+        
+        <a href="/Rinskings/">最新消息</a>
+        
+        <a href="/Rinskings/brand">品牌故事</a>
+        
+        <a href="/Rinskings/menu">飲品菜單</a>
+        
+        <a href="/Rinskings/ingredients">嚴選食材</a>
+        
+        <a href="/Rinskings/stores">門市資訊</a>
+        
+        <a href="/Rinskings/contact">聯絡我們</a>
+        
+      </div>
+    </transition>
+  </nav>
+</div>
+
+<transition name="fade">
+  <div
+    id="menu-curtain"
+    @click="showMenuItems = !showMenuItems"
+    v-show="showMenuItems"
+  ></div>
+</transition>
+
+      <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+        
+  <div class="article">
+    <div>
+      <h1>近期店面發展</h1>
+    </div>
+    <div class="info">
+      <span class="date">
+        <span class="icon">
+          <i class="fa-solid fa-calendar fa-fw"></i>
+        </span>
+        2023/11/8
+      </span>
+      
+        <span class="category">
+          
+          <a href="/Rinskings/categories/allAnnouncements/">
+            <span class="icon">
+              <i class="fa-solid fa-bookmark fa-fw"></i>
+            </span>
+            所有公告
+          </a>
+          
+          <a href="/Rinskings/categories/allAnnouncements/officialAnnouncement/">
+            <span class="icon">
+              <i class="fa-solid fa-bookmark fa-fw"></i>
+            </span>
+            官方公告
+          </a>
+          
+        </span>
+      
+    </div>
+    <div class="content" v-pre><p>11&#x2F;14(二)-11&#x2F;16(四)試營運<br>11&#x2F;20(ㄧ)正式開幕<br>&#x2F;<br>(本篇內文小長，有興趣可耐心閱讀）<br>各位好久不見，這段時間真的非常忙碌，幾乎都沒有休息，期間沒有出攤的日子，給大家造成不便還請見諒。</p>
+<p>今年四月底，原本的工作室店面租約到期，搬遷至新的地方後，五月底已經有簡易的弄好新店面了，但六月至八月這段時間，安排了太多的活動(尤其是外縣市出攤)，導致無法好好處理店面的事務。再加上店面的裝修實在不是自己想要呈現給大家的樣子，於是九月及十月，老闆把所有的出攤活動都排開，重新專注於店面的整理。</p>
+<p>這次店面的整理及設計規劃，一樣由老闆親自處理，同時要思考設計店面，平日也必須守在店裡與裝潢師傅溝通及監督，分身乏術的關係無法同時出攤，外加固定的工作夥伴也有了自己的人生規劃，離開了芸蒔刻。人手不足的情況下，近期只剩假日會於審計新村出攤。而九月期間，幾乎呈現快沒有出攤的狀況，讓許多客人撲空真的非常不好意思，請各位多多包涵。</p>
+<p>至於外縣市出攤的部分，目前為了先穩定好店面的經營，除了台中的活動以外，外縣市的出攤活動暫時都不會出席。外縣市的粉絲們，如有需要飲品的話，未來歡迎前來店面購買。如果無法前來，一樣可以透過『全台低溫宅配』的服務購買飲品喔！</p>
+<p>以上，跟大家簡短告知一下近期的狀況</p>
+<p>🔺另外！其實原本預計於11&#x2F;9(四)開始試營運，但沒想到過於忙碌造成免疫力下降，近日重感冒的關係，這幾天真的必須好好休息一下。原本告知了一些粉絲預計11&#x2F;9試營運的部分，真的非常抱歉，要跟你們延後幾天了～</p>
+<p>🔺最後就是要正式跟各位告知好消息啦！<br>11&#x2F;14(二)～11&#x2F;16(四)為期三天試營運！<br>11&#x2F;20(一)將會正式營運！<br>試營運期間及正式營運販售的品項近日會陸續公佈給大家，透過三天試營運來調整工作內容，服務的過程中若有不足還請各位多多包涵。當然試營運三天也都會有優惠的活動，活動內容，也會一併於近日一起公布給各位。</p>
+<p>最後感謝大家長久以來的支持。</p>
+<p>即將正式開店了，真的非常緊張，也請各位敬請期待！</p>
+<p>📍店面地址：台中市西區向上路一段99-3號</p>
+</div>
+  </div>
+ <footer>
+  <div class="container">
+    <div class="menu">
+      <!-- <div class="logo">
+        <img src="/Rinskings/images/logo_w.png" alt="logo">
+        <div class="brand">
+          <div class="nameCh">芸蒔刻</div>
+          <div class="nameEn">Rinskings</div>
+        </div>
+      </div> -->
+      <ul class="list">
+        
+          <li>
+            <a href="/Rinskings/">最新消息</a>
+          </li>
+        
+          <li>
+            <a href="/Rinskings/brand">品牌故事</a>
+          </li>
+        
+          <li>
+            <a href="/Rinskings/menu">飲品菜單</a>
+          </li>
+        
+          <li>
+            <a href="/Rinskings/ingredients">嚴選食材</a>
+          </li>
+        
+          <li>
+            <a href="/Rinskings/stores">門市資訊</a>
+          </li>
+        
+          <li>
+            <a href="/Rinskings/contact">聯絡我們</a>
+          </li>
+        
+      </ul>
+      <div class="other">
+        <a class="fa-brands fa-facebook" href="https://www.facebook.com/Rinskings/?locale=zh_TW" target="_blank"></a>
+        <a class="fa-brands fa-instagram" href="https://www.instagram.com/rinskings_fruittea/" target="_blank"></a>
+      </div>
+    </div>
+    <div class="detail">
+      <div class="info">
+        <b>｜ 台中向上店 ｜</b>
+        <div class="address">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>台中市西區向上路一段99-3號</span>
+        </div>
+        <div class="businessHours">
+          <i class="fa-solid fa-clock"></i>
+          <span>週二至週日，11:00 - 20:00</span>
+        </div>
+        <div class="phone">
+          <i class="fa-solid fa-phone"></i>
+          <span>04-2301-6939</span>
+        </div>
+      </div>
+      <div class="info">
+        <b>｜ 審計新村攤位 ｜</b>
+        <div class="address">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>台中市西區民生路368巷1弄</span>
+        </div>
+        <div class="businessHours">
+          <i class="fa-solid fa-clock"></i>
+          <span>週一至週五，12:30 - 17:00</span>
+        </div>
+        <div class="holidayHours">
+          <span>週六、週日，10:30 - 18:30</span>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="copyright">
+      <div>
+        <span>
+          Copyright &copy; 2017 - 2024 Rinskings 芸蒔刻｜鮮果製茶園 . All rights reserved.
+        </span>
+      </div>
+      <div>
+        <span>統一編號｜82518398</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div>
+      
+    </div>
+    <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script>
+    <script type="text/javascript">
+    var s = skrollr.init();
+    </script>
+    <script src="/Rinskings/js/main.js"></script>
+  </body>
+</html>
