@@ -1,1 +1,1 @@
-@media(max-width: 1200px){.container{max-width:100%;padding:0 5vw}#menu #desktopMenu{padding:0 5vw}#menu #mobileMenu{display:none}}@media(max-width: 950px){#menu #desktopMenu{display:none}#menu #mobileMenu{display:flex}}
+@media (max-width: 1200px){.container{max-width:100%;padding:0 5vw}#menu #desktopMenu{padding:0 5vw}#menu #mobileMenu{display:none}}@media (max-width: 950px){#menu #desktopMenu{display:none}#menu #mobileMenu{display:flex}}
