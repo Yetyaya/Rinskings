@@ -12,6 +12,26 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <link rel="icon" href="/Rinskings/images/favicon.ico" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-root.css" />
+    <script src="/Rinskings/js/swiper-bundle.min.js"></script>
+    <script src="/Rinskings/js/smtp.js"></script>
+    <script>
+      Email.send({
+        SecureToken : "eaca9b0c-ca68-45a9-a85d-2f392f72c309",
+        To : 'c2514161@gmail.com',
+        From : "Rinskings 芸蒔刻｜鮮果製茶園",
+        Subject : "This is the subject",
+        Body : "And this is the body",
+        Attachments : [
+        {
+          name : "smtpjs.png",
+          path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+        }]
+      }).then(
+        message => alert(message)
+      );
+    </script>
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.cn" />
@@ -146,47 +166,43 @@
       <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
         
   <div class="article">
-    <div>
-      <h1>季節限定『水梨菓茶』</h1>
-    </div>
-    <div class="info">
-      <span class="date">
-        <span class="icon">
-          <i class="fa-solid fa-calendar fa-fw"></i>
-        </span>
-        2022/10/5
-      </span>
-      
-        <span class="category">
+    <div class="container">
+      <div class="breadcrumb">
+        <ul>
           
-          <a href="/Rinskings/categories/allAnnouncements/">
-            <span class="icon">
-              <i class="fa-solid fa-bookmark fa-fw"></i>
-            </span>
-            所有公告
-          </a>
+            
+              <li>
+                <a href="/Rinskings/categories/allAnnouncements/">
+                  <span>所有公告</span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Rinskings/categories/allAnnouncements/newArrivals/">
+                  <span>新品上市</span>
+                </a>
+              </li>
+            
           
-          <a href="/Rinskings/categories/allAnnouncements/newArrivals/">
-            <span class="icon">
-              <i class="fa-solid fa-bookmark fa-fw"></i>
-            </span>
-            新品上市
-          </a>
-          
-        </span>
-      
-    </div>
-    <div class="content" v-pre><h2 id="本月推出季節限定『水梨菓茶』十月出攤表出爐-10月特別活動加開公告-🔺這個月推出的季節限定-『水梨菓茶』『鮮榨水梨＋鮮切果丁-芸蒔青茶』-喝起來的口感是非常清甜順口的-搭配了清脆的新鮮水梨果丁-會讓你一直想邊吃邊喝下去-還沒喝過的各位真的要嚐嚐看！">本月推出季節限定『水梨菓茶』十月出攤表出爐-10月特別活動加開公告<br>
-/<br>
-🔺這個月推出的季節限定-『水梨菓茶』『鮮榨水梨＋鮮切果丁+芸蒔青茶』,喝起來的口感是非常清甜順口的,搭配了清脆的新鮮水梨果丁,會讓你一直想邊吃邊喝下去,還沒喝過的各位真的要嚐嚐看！</h2>
-<h2 id="🔺十月的特別活動雙十連假-10-8-～10-10-週六至週一-都會在審計出攤創意台中-10-29-10-30-11-5-11-6-都會在綠空鐵道">🔺十月的特別活動雙十連假(10/8 ～10/10)週六至週一,都會在審計出攤創意台中(10/29,10/30,11/5,11/6),都會在綠空鐵道</h2>
-<p>🔸創意台中Taichung Hybrid,由台中市政府文化局主辦<br>
-10/29(六)10/30(日)會與邊緣工事文創市集配合<br>
-11/05(六)11/06(日)會與舊物盛典文創市集配合活動地點：綠空鐵道南段 (臺中驛 - 學府路)<br>
+        </ul>
+      </div>
+      <div class="info">
+        <div class="date">2022/10/5</div>
+      </div>
+      <div class="title">
+        <h1>季節限定『水梨菓茶』</h1>
+      </div>
+      <div class="content" v-pre><p>這個月推出的季節限定『水梨菓茶』，鮮榨水梨＋鮮切果丁＋芸蒔青茶的組合，喝起來口感清甜順口，搭配上清脆的新鮮水梨果丁，讓人只想一直喝下去，還沒喝過的各位真的要嚐嚐看！</p>
+<p>🎈 <strong>十月的特別活動</strong><br>
+雙十連假(10/8 ～10/10)週六至週一，會在審計新村出攤。<br>創意台中(10/29、10/30、11/5、11/6)，會在綠空鐵道出攤。</p>
+<p>🔸 <strong>創意台中 Taichung Hybrid</strong>，台中市政府文化局主辦<br>
+10/29(六)、10/30(日)會與邊緣工事文創市集配合。<br>
+11/05(六)、11/06(日)會與舊物盛典文創市集配合。活動地點：綠空鐵道南段 (臺中驛－學府路)<br>
 詳情資訊請搜尋🔍創意台中2022</p>
 <p><img src="../assets/images/2022%E5%89%B5%E6%84%8F%E5%8F%B0%E4%B8%AD.png" alt=""></p>
 <p><img src="../assets/images/2022%E5%8D%81%E6%9C%88%E5%87%BA%E6%94%A4%E8%A1%A8.png" alt=""></p>
 </div>
+    </div>
   </div>
  <footer>
   <div class="container">
@@ -278,7 +294,9 @@
       </div>
       
     </div>
-    <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script> -->
     <script src="/Rinskings/js/main.js"></script>
   </body>
 </html>

@@ -12,6 +12,26 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <link rel="icon" href="/Rinskings/images/favicon.ico" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-root.css" />
+    <script src="/Rinskings/js/swiper-bundle.min.js"></script>
+    <script src="/Rinskings/js/smtp.js"></script>
+    <script>
+      Email.send({
+        SecureToken : "eaca9b0c-ca68-45a9-a85d-2f392f72c309",
+        To : 'c2514161@gmail.com',
+        From : "Rinskings 芸蒔刻｜鮮果製茶園",
+        Subject : "This is the subject",
+        Body : "And this is the body",
+        Attachments : [
+        {
+          name : "smtpjs.png",
+          path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+        }]
+      }).then(
+        message => alert(message)
+      );
+    </script>
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.cn" />
@@ -146,52 +166,55 @@
       <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
         
   <div class="article">
-    <div>
-      <h1>『百香青飲』四季供應</h1>
-    </div>
-    <div class="info">
-      <span class="date">
-        <span class="icon">
-          <i class="fa-solid fa-calendar fa-fw"></i>
-        </span>
-        2020/10/20
-      </span>
-      
-        <span class="category">
+    <div class="container">
+      <div class="breadcrumb">
+        <ul>
           
-          <a href="/Rinskings/categories/allAnnouncements/">
-            <span class="icon">
-              <i class="fa-solid fa-bookmark fa-fw"></i>
-            </span>
-            所有公告
-          </a>
+            
+              <li>
+                <a href="/Rinskings/categories/allAnnouncements/">
+                  <span>所有公告</span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Rinskings/categories/allAnnouncements/newArrivals/">
+                  <span>新品上市</span>
+                </a>
+              </li>
+            
           
-          <a href="/Rinskings/categories/allAnnouncements/newArrivals/">
-            <span class="icon">
-              <i class="fa-solid fa-bookmark fa-fw"></i>
-            </span>
-            新品上市
-          </a>
-          
-        </span>
-      
-    </div>
-    <div class="content" v-pre><h2 id="【百香青飲✨四季供應】【審計新村改為”每日出攤”🏡】">【百香青飲✨四季供應】【審計新村改為”每日出攤”🏡】</h2>
-<h2 id="🔺全台宅配及台中外送服務持續中🏃🏻（宅配及外送詳情請直接私訊或通話給我喔-）">🔺全台宅配及台中外送服務持續中🏃🏻<br>
-（宅配及外送詳情請直接私訊或通話給我喔~）</h2>
-<h2 id="各位真的是好久不見👋上篇發文至今居然相隔三個月了😅想跟各位告知一下市集飲品供應部分為因應客人要求想要有酸的口味而一直以來芸蒔刻提供的果茶口味中只有百香青飲是酸甜的口感因此找尋了供應商很久後終於克服了只有季節能提供的問題現在百香口味將改為四季都會提供囉">各位真的是好久不見👋<br>
-上篇發文至今居然相隔三個月了😅<br>
-想跟各位告知一下市集飲品供應部分為因應客人要求想要有酸的口味而一直以來芸蒔刻提供的果茶口味中只有百香青飲是酸甜的口感因此找尋了供應商很久後終於克服了只有季節能提供的問題現在百香口味將改為四季都會提供囉</h2>
-<h2 id="再次介紹-百香青飲✨將百香果籽打碎濾掉再搭配四季春讓各位喝到既清爽又酸甜的滋味😋尾韻一樣充滿茶香味🍃也是老闆自己喜愛的口味之一喔喜歡森低森低的你們千萬不能錯過">再次介紹-百香青飲✨<br>
-將百香果籽打碎濾掉再搭配四季春讓各位喝到既清爽又酸甜的滋味😋<br>
-尾韻一樣充滿茶香味🍃<br>
-也是老闆自己喜愛的口味之一喔喜歡森低森低的你們千萬不能錯過</h2>
-<p>🔺另外即日起<br>
-10.11.12月出攤日將改為每天😊<br>
-出攤時間為平日 13：00～18：00<br>
-假日 10：30～18：00<br>
-如有休假會在另行公告🙌🏻</p>
+        </ul>
+      </div>
+      <div class="info">
+        <div class="date">2020/10/20</div>
+      </div>
+      <div class="title">
+        <h1>『百香青飲』四季供應</h1>
+      </div>
+      <div class="content" v-pre><p>各位真的是好久不見👋<br>
+上篇發文至今居然相隔三個月了😅</p>
+<p>想跟各位告知一下市集飲品供應部分，因應客人要求想要有酸的口味，而芸蒔刻一直以來提供的果茶口味中，只有百香青飲是酸甜的口感。因此找尋供應商許久之後，終於克服了季節性提供的問題，現在百香口味將改為四季提供囉！</p>
+<p><strong>百香青飲</strong>✨<br>
+將百香果籽打碎濾掉再搭配四季春，讓各位喝到既清爽又酸甜的滋味之外，尾韻一樣充滿茶香味🍃<br>
+是老闆自己喜愛的口味之一。</p>
+<p>喜歡森低森低的你們千萬不能錯過！</p>
+<p>而即日起，10、11、12月將改為每天出攤😊<br>
+大家再也不用擔心喝不到芸蒔刻爽口好喝的水果茶啦！</p>
+<hr>
+<ul>
+<li>🕐 <strong>出攤時間</strong></li>
+<li>平日 13：00～18：00</li>
+<li>假日 10：30～18：00</li>
+<li>如有休假再另行公告🙌🏻</li>
+</ul>
+<hr>
+<ul>
+<li>🚚 全台宅配及台中外送服務持續中</li>
+<li>宅配及外送詳情請直接私訊或通話給老闆喔~</li>
+</ul>
 </div>
+    </div>
   </div>
  <footer>
   <div class="container">
@@ -283,7 +306,9 @@
       </div>
       
     </div>
-    <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script> -->
     <script src="/Rinskings/js/main.js"></script>
   </body>
 </html>

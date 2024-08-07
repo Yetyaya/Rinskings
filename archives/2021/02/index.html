@@ -12,6 +12,26 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <link rel="icon" href="/Rinskings/images/favicon.ico" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-root.css" />
+    <script src="/Rinskings/js/swiper-bundle.min.js"></script>
+    <script src="/Rinskings/js/smtp.js"></script>
+    <script>
+      Email.send({
+        SecureToken : "eaca9b0c-ca68-45a9-a85d-2f392f72c309",
+        To : 'c2514161@gmail.com',
+        From : "Rinskings 芸蒔刻｜鮮果製茶園",
+        Subject : "This is the subject",
+        Body : "And this is the body",
+        Attachments : [
+        {
+          name : "smtpjs.png",
+          path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+        }]
+      }).then(
+        message => alert(message)
+      );
+    </script>
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.cn" />
@@ -146,263 +166,262 @@
       <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
         
 <div id="archives">
+  <div id="timeline-wrap" ref="timeline">
     
-    <div id="timeline-wrap" ref="timeline">
-        
-        <div class="timeline" data-title="三月出攤🔥弘光科大校園市集">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2020/3/3</div>
-                <a href="/Rinskings/%E4%B8%89%E6%9C%88%E5%87%BA%E6%94%A4%F0%9F%94%A5%E5%BC%98%E5%85%89%E7%A7%91%E5%A4%A7%E6%A0%A1%E5%9C%92%E5%B8%82%E9%9B%86/">
-                    <h3>三月出攤🔥弘光科大校園市集</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/Rinskings/categories/allAnnouncements/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            所有公告
-                        </a>
-                    </span>
-                    
-                    
-                </div>
+      <div class="timeline" data-title="三月出攤🔥弘光科大校園市集">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2020/3/3</div>
+            <a href="/Rinskings/%E4%B8%89%E6%9C%88%E5%87%BA%E6%94%A4%F0%9F%94%A5%E5%BC%98%E5%85%89%E7%A7%91%E5%A4%A7%E6%A0%A1%E5%9C%92%E5%B8%82%E9%9B%86/">
+                <h3>三月出攤🔥弘光科大校園市集</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/Rinskings/categories/allAnnouncements/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        所有公告
+                    </a>
+                </span>
+                
+                
             </div>
         </div>
-        
-        <div class="timeline" data-title="祝全天下媽媽❤️母親節快樂">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2020/5/8</div>
-                <a href="/Rinskings/%E7%A5%9D%E5%85%A8%E5%A4%A9%E4%B8%8B%E5%AA%BD%E5%AA%BD%E2%9D%A4%EF%B8%8F%E6%AF%8D%E8%A6%AA%E7%AF%80%E5%BF%AB%E6%A8%82/">
-                    <h3>祝全天下媽媽❤️母親節快樂</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/Rinskings/categories/allAnnouncements/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            所有公告
-                        </a>
-                    </span>
-                    
-                    
-                </div>
+      </div>
+      
+      <div class="timeline" data-title="祝全天下媽媽❤️母親節快樂">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2020/5/8</div>
+            <a href="/Rinskings/%E7%A5%9D%E5%85%A8%E5%A4%A9%E4%B8%8B%E5%AA%BD%E5%AA%BD%E2%9D%A4%EF%B8%8F%E6%AF%8D%E8%A6%AA%E7%AF%80%E5%BF%AB%E6%A8%82/">
+                <h3>祝全天下媽媽❤️母親節快樂</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/Rinskings/categories/allAnnouncements/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        所有公告
+                    </a>
+                </span>
+                
+                
             </div>
         </div>
-        
-        <div class="timeline" data-title="『金芒青飲』現正熱賣中">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2020/6/10</div>
-                <a href="/Rinskings/%E3%80%8E%E9%87%91%E8%8A%92%E9%9D%92%E9%A3%B2%E3%80%8F%E7%8F%BE%E6%AD%A3%E7%86%B1%E8%B3%A3%E4%B8%AD/">
-                    <h3>『金芒青飲』現正熱賣中</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/Rinskings/categories/allAnnouncements/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            所有公告
-                        </a>
-                    </span>
-                    
-                    
-                </div>
+      </div>
+      
+      <div class="timeline" data-title="『金芒青飲』現正熱賣中">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2020/6/10</div>
+            <a href="/Rinskings/%E3%80%8E%E9%87%91%E8%8A%92%E9%9D%92%E9%A3%B2%E3%80%8F%E7%8F%BE%E6%AD%A3%E7%86%B1%E8%B3%A3%E4%B8%AD/">
+                <h3>『金芒青飲』現正熱賣中</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/Rinskings/categories/allAnnouncements/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        所有公告
+                    </a>
+                </span>
+                
+                
             </div>
         </div>
-        
-        <div class="timeline" data-title="『百香青飲』四季供應">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2020/10/20</div>
-                <a href="/Rinskings/%E3%80%8E%E7%99%BE%E9%A6%99%E9%9D%92%E9%A3%B2%E3%80%8F%E5%9B%9B%E5%AD%A3%E4%BE%9B%E6%87%89/">
-                    <h3>『百香青飲』四季供應</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/Rinskings/categories/allAnnouncements/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            所有公告
-                        </a>
-                    </span>
-                    
-                    
-                </div>
+      </div>
+      
+      <div class="timeline" data-title="『百香青飲』四季供應">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2020/10/20</div>
+            <a href="/Rinskings/%E3%80%8E%E7%99%BE%E9%A6%99%E9%9D%92%E9%A3%B2%E3%80%8F%E5%9B%9B%E5%AD%A3%E4%BE%9B%E6%87%89/">
+                <h3>『百香青飲』四季供應</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/Rinskings/categories/allAnnouncements/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        所有公告
+                    </a>
+                </span>
+                
+                
             </div>
         </div>
-        
-        <div class="timeline" data-title="私房限定『草莓青飲』">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2021/2/8</div>
-                <a href="/Rinskings/%E7%A7%81%E6%88%BF%E9%99%90%E5%AE%9A%E3%80%8E%E8%8D%89%E8%8E%93%E9%9D%92%E9%A3%B2%E3%80%8F/">
-                    <h3>私房限定『草莓青飲』</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/Rinskings/categories/allAnnouncements/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            所有公告
-                        </a>
-                    </span>
-                    
-                    
-                </div>
+      </div>
+      
+      <div class="timeline" data-title="私房限定『草莓青飲』">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2021/2/8</div>
+            <a href="/Rinskings/%E7%A7%81%E6%88%BF%E9%99%90%E5%AE%9A%E3%80%8E%E8%8D%89%E8%8E%93%E9%9D%92%E9%A3%B2%E3%80%8F/">
+                <h3>私房限定『草莓青飲』</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/Rinskings/categories/allAnnouncements/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        所有公告
+                    </a>
+                </span>
+                
+                
             </div>
         </div>
-        
-        <div class="timeline" data-title="熱銷推薦『奇異菓茶』">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2022/4/8</div>
-                <a href="/Rinskings/%E7%86%B1%E9%8A%B7%E6%8E%A8%E8%96%A6%E3%80%8E%E5%A5%87%E7%95%B0%E8%8F%93%E8%8C%B6%E3%80%8F/">
-                    <h3>熱銷推薦『奇異菓茶』</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/Rinskings/categories/allAnnouncements/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            所有公告
-                        </a>
-                    </span>
-                    
-                    
-                </div>
+      </div>
+      
+      <div class="timeline" data-title="『奇異菓茶』，炎夏熱銷推薦">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/4/8</div>
+            <a href="/Rinskings/%E3%80%8E%E5%A5%87%E7%95%B0%E8%8F%93%E8%8C%B6%E3%80%8F%EF%BC%8C%E7%82%8E%E5%A4%8F%E7%86%B1%E9%8A%B7%E6%8E%A8%E8%96%A6/">
+                <h3>『奇異菓茶』，炎夏熱銷推薦</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/Rinskings/categories/allAnnouncements/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        所有公告
+                    </a>
+                </span>
+                
+                
             </div>
         </div>
-        
-        <div class="timeline" data-title="季節限定『水梨菓茶』">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2022/10/5</div>
-                <a href="/Rinskings/%E5%AD%A3%E7%AF%80%E9%99%90%E5%AE%9A%E3%80%8E%E6%B0%B4%E6%A2%A8%E8%8F%93%E8%8C%B6%E3%80%8F/">
-                    <h3>季節限定『水梨菓茶』</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/Rinskings/categories/allAnnouncements/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            所有公告
-                        </a>
-                    </span>
-                    
-                    
-                </div>
+      </div>
+      
+      <div class="timeline" data-title="季節限定『水梨菓茶』">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2022/10/5</div>
+            <a href="/Rinskings/%E5%AD%A3%E7%AF%80%E9%99%90%E5%AE%9A%E3%80%8E%E6%B0%B4%E6%A2%A8%E8%8F%93%E8%8C%B6%E3%80%8F/">
+                <h3>季節限定『水梨菓茶』</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/Rinskings/categories/allAnnouncements/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        所有公告
+                    </a>
+                </span>
+                
+                
             </div>
         </div>
-        
-        <div class="timeline" data-title="芸蒔刻工作室要搬遷啦">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/5/5</div>
-                <a href="/Rinskings/%E8%8A%B8%E8%92%94%E5%88%BB%E5%B7%A5%E4%BD%9C%E5%AE%A4%E8%A6%81%E6%90%AC%E9%81%B7%E5%95%A6/">
-                    <h3>芸蒔刻工作室要搬遷啦</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/Rinskings/categories/allAnnouncements/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            所有公告
-                        </a>
-                    </span>
-                    
-                    
-                </div>
+      </div>
+      
+      <div class="timeline" data-title="芸蒔刻工作室要搬遷啦">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2023/5/5</div>
+            <a href="/Rinskings/%E8%8A%B8%E8%92%94%E5%88%BB%E5%B7%A5%E4%BD%9C%E5%AE%A4%E8%A6%81%E6%90%AC%E9%81%B7%E5%95%A6/">
+                <h3>芸蒔刻工作室要搬遷啦</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/Rinskings/categories/allAnnouncements/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        所有公告
+                    </a>
+                </span>
+                
+                
             </div>
         </div>
-        
-        <div class="timeline" data-title="近期店面發展">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/11/8</div>
-                <a href="/Rinskings/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%9D%A2%E7%99%BC%E5%B1%95/">
-                    <h3>近期店面發展</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/Rinskings/categories/allAnnouncements/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            所有公告
-                        </a>
-                    </span>
-                    
-                    
-                </div>
+      </div>
+      
+      <div class="timeline" data-title="近期店面發展">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2023/11/8</div>
+            <a href="/Rinskings/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%9D%A2%E7%99%BC%E5%B1%95/">
+                <h3>近期店面發展</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/Rinskings/categories/allAnnouncements/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        所有公告
+                    </a>
+                </span>
+                
+                
             </div>
         </div>
-        
-        <div class="timeline" data-title="新年新氣象！新店面營業啦！">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/1/5</div>
-                <a href="/Rinskings/%E6%96%B0%E5%B9%B4%E6%96%B0%E6%B0%A3%E8%B1%A1%EF%BC%81%E6%96%B0%E5%BA%97%E9%9D%A2%E7%87%9F%E6%A5%AD%E5%95%A6%EF%BC%81/">
-                    <h3>新年新氣象！新店面營業啦！</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/Rinskings/categories/allAnnouncements/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            所有公告
-                        </a>
-                    </span>
-                    
-                    
-                </div>
+      </div>
+      
+      <div class="timeline" data-title="新年新氣象！新店面營業啦！">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2024/1/5</div>
+            <a href="/Rinskings/%E6%96%B0%E5%B9%B4%E6%96%B0%E6%B0%A3%E8%B1%A1%EF%BC%81%E6%96%B0%E5%BA%97%E9%9D%A2%E7%87%9F%E6%A5%AD%E5%95%A6%EF%BC%81/">
+                <h3>新年新氣象！新店面營業啦！</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/Rinskings/categories/allAnnouncements/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        所有公告
+                    </a>
+                </span>
+                
+                
             </div>
         </div>
-        
-        <div class="timeline" data-title="六週年！店面活動開跑！">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/4/2</div>
-                <a href="/Rinskings/%E5%85%AD%E9%80%B1%E5%B9%B4%EF%BC%81%E5%BA%97%E9%9D%A2%E6%B4%BB%E5%8B%95%E9%96%8B%E8%B7%91%EF%BC%81/">
-                    <h3>六週年！店面活動開跑！</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/Rinskings/categories/allAnnouncements/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            所有公告
-                        </a>
-                    </span>
-                    
-                    
-                </div>
+      </div>
+      
+      <div class="timeline" data-title="六週年！店面活動開跑！">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2024/4/2</div>
+            <a href="/Rinskings/%E5%85%AD%E9%80%B1%E5%B9%B4%EF%BC%81%E5%BA%97%E9%9D%A2%E6%B4%BB%E5%8B%95%E9%96%8B%E8%B7%91%EF%BC%81/">
+                <h3>六週年！店面活動開跑！</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/Rinskings/categories/allAnnouncements/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        所有公告
+                    </a>
+                </span>
+                
+                
             </div>
         </div>
-        
-    </div>
+      </div>
+      
+  </div>
 </div>
  <footer>
   <div class="container">
@@ -494,7 +513,9 @@
       </div>
       
     </div>
-    <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script> -->
     <script src="/Rinskings/js/main.js"></script>
   </body>
 </html>

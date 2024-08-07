@@ -1,0 +1,8 @@
+:root {
+  --swiper-theme-color: #BC955C;
+  --swiper-navigation-sides-offset: 3vw;
+  --swiper-pagination-bottom: 20px;
+  --swiper-pagination-bullet-width: 12px;
+  --swiper-pagination-bullet-height: 12px;
+  --swiper-pagination-bullet-horizontal-gap: 8px;
+}

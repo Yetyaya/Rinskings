@@ -12,6 +12,26 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <link rel="icon" href="/Rinskings/images/favicon.ico" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-root.css" />
+    <script src="/Rinskings/js/swiper-bundle.min.js"></script>
+    <script src="/Rinskings/js/smtp.js"></script>
+    <script>
+      Email.send({
+        SecureToken : "eaca9b0c-ca68-45a9-a85d-2f392f72c309",
+        To : 'c2514161@gmail.com',
+        From : "Rinskings 芸蒔刻｜鮮果製茶園",
+        Subject : "This is the subject",
+        Body : "And this is the body",
+        Attachments : [
+        {
+          name : "smtpjs.png",
+          path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+        }]
+      }).then(
+        message => alert(message)
+      );
+    </script>
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.cn" />
@@ -146,54 +166,54 @@
       <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
         
   <div class="article">
-    <div>
-      <h1>祝全天下媽媽❤️母親節快樂</h1>
-    </div>
-    <div class="info">
-      <span class="date">
-        <span class="icon">
-          <i class="fa-solid fa-calendar fa-fw"></i>
-        </span>
-        2020/5/8
-      </span>
-      
-        <span class="category">
+    <div class="container">
+      <div class="breadcrumb">
+        <ul>
           
-          <a href="/Rinskings/categories/allAnnouncements/">
-            <span class="icon">
-              <i class="fa-solid fa-bookmark fa-fw"></i>
-            </span>
-            所有公告
-          </a>
+            
+              <li>
+                <a href="/Rinskings/categories/allAnnouncements/">
+                  <span>所有公告</span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Rinskings/categories/allAnnouncements/officialAnnouncement/">
+                  <span>官方公告</span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Rinskings/categories/allAnnouncements/stallInformation/">
+                  <span>出攤資訊</span>
+                </a>
+              </li>
+            
           
-          <a href="/Rinskings/categories/allAnnouncements/officialAnnouncement/">
-            <span class="icon">
-              <i class="fa-solid fa-bookmark fa-fw"></i>
-            </span>
-            官方公告
-          </a>
-          
-          <a href="/Rinskings/categories/allAnnouncements/stallInformation/">
-            <span class="icon">
-              <i class="fa-solid fa-bookmark fa-fw"></i>
-            </span>
-            出攤資訊
-          </a>
-          
-        </span>
-      
-    </div>
-    <div class="content" v-pre><h2 id="【祝全天下媽媽❤️母親節快樂】【五月出攤-每週六、日、一】">【祝全天下媽媽❤️母親節快樂】【五月出攤-每週六、日、一】</h2>
-<h2 id="🔺全台宅配及台中外送服務持續🏃🏻（宅配及外送詳情請直接私訊或通話給我喔-）">🔺全台宅配及台中外送服務持續🏃🏻<br>
-（宅配及外送詳情請直接私訊或通話給我喔~）</h2>
-<h2 id="母親節的這個週末一樣會在審計出現喔-歡迎大家帶著親愛的媽媽一起來喝杯甜上心頭的水果茶吧-😋">母親節的這個週末一樣會在審計出現喔~<br>
-歡迎大家帶著親愛的媽媽一起來喝杯甜上心頭的水果茶吧!😋</h2>
-<h2 id="另外本月因為工作室搬遷及整修🏗出攤時間縮減為每週六、日、一六月將恢復正常出攤時間還請各位見諒😅">另外本月因為工作室搬遷及整修🏗<br>
-出攤時間縮減為每週六、日、一六月將恢復正常出攤時間還請各位見諒😅</h2>
-<p>🔺五月審計新村出攤<br>
-🔸每週一、六、日<br>
-🔸時間平日13：00～18：00 六日10：30～18：00</p>
+        </ul>
+      </div>
+      <div class="info">
+        <div class="date">2020/5/8</div>
+      </div>
+      <div class="title">
+        <h1>祝全天下媽媽❤️母親節快樂</h1>
+      </div>
+      <div class="content" v-pre><p>母親節的這個週末，芸蒔刻一樣會在審計新村出攤！<br>歡迎大家帶著親愛的媽媽，一起來喝杯甜上心頭的水果茶吧!😋</p>
+<p>另外本月因為工作室搬遷及整修🚧<br>
+出攤時間縮減為每週六、日、一，六月將恢復正常出攤時間，還請各位見諒😅</p>
+<hr>
+<ul>
+<li>🕐 <strong>五月審計新村出攤</strong></li>
+<li>週一，13:00～18:00</li>
+<li>週六、日，10:30～18:00</li>
+</ul>
+<hr>
+<ul>
+<li>🚚 全台宅配及台中外送服務持續中</li>
+<li>宅配及外送詳情請直接私訊或通話給老闆喔~</li>
+</ul>
 </div>
+    </div>
   </div>
  <footer>
   <div class="container">
@@ -285,7 +305,9 @@
       </div>
       
     </div>
-    <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script> -->
     <script src="/Rinskings/js/main.js"></script>
   </body>
 </html>

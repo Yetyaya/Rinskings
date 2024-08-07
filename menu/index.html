@@ -12,6 +12,26 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <link rel="icon" href="/Rinskings/images/favicon.ico" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-root.css" />
+    <script src="/Rinskings/js/swiper-bundle.min.js"></script>
+    <script src="/Rinskings/js/smtp.js"></script>
+    <script>
+      Email.send({
+        SecureToken : "eaca9b0c-ca68-45a9-a85d-2f392f72c309",
+        To : 'c2514161@gmail.com',
+        From : "Rinskings 芸蒔刻｜鮮果製茶園",
+        Subject : "This is the subject",
+        Body : "And this is the body",
+        Attachments : [
+        {
+          name : "smtpjs.png",
+          path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+        }]
+      }).then(
+        message => alert(message)
+      );
+    </script>
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.cn" />
@@ -377,7 +397,9 @@
       </div>
       
     </div>
-    <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script> -->
     <script src="/Rinskings/js/main.js"></script>
   </body>
 </html>

@@ -12,6 +12,26 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <link rel="icon" href="/Rinskings/images/favicon.ico" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-root.css" />
+    <script src="/Rinskings/js/swiper-bundle.min.js"></script>
+    <script src="/Rinskings/js/smtp.js"></script>
+    <script>
+      Email.send({
+        SecureToken : "eaca9b0c-ca68-45a9-a85d-2f392f72c309",
+        To : 'c2514161@gmail.com',
+        From : "Rinskings 芸蒔刻｜鮮果製茶園",
+        Subject : "This is the subject",
+        Body : "And this is the body",
+        Attachments : [
+        {
+          name : "smtpjs.png",
+          path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+        }]
+      }).then(
+        message => alert(message)
+      );
+    </script>
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.cn" />
@@ -146,49 +166,48 @@
       <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
         
   <div class="article">
-    <div>
-      <h1>私房限定『草莓青飲』</h1>
-    </div>
-    <div class="info">
-      <span class="date">
-        <span class="icon">
-          <i class="fa-solid fa-calendar fa-fw"></i>
-        </span>
-        2021/2/8
-      </span>
-      
-        <span class="category">
+    <div class="container">
+      <div class="breadcrumb">
+        <ul>
           
-          <a href="/Rinskings/categories/allAnnouncements/">
-            <span class="icon">
-              <i class="fa-solid fa-bookmark fa-fw"></i>
-            </span>
-            所有公告
-          </a>
+            
+              <li>
+                <a href="/Rinskings/categories/allAnnouncements/">
+                  <span>所有公告</span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Rinskings/categories/allAnnouncements/newArrivals/">
+                  <span>新品上市</span>
+                </a>
+              </li>
+            
           
-          <a href="/Rinskings/categories/allAnnouncements/newArrivals/">
-            <span class="icon">
-              <i class="fa-solid fa-bookmark fa-fw"></i>
-            </span>
-            新品上市
-          </a>
-          
-        </span>
-      
-    </div>
-    <div class="content" v-pre><h2 id="【2月出攤🎊農曆過年都在審計喔】【🍓草莓青飲資訊公告】">【2月出攤🎊農曆過年都在審計喔】【🍓草莓青飲資訊公告】</h2>
-<h2 id="各位好久不見👋2月農曆過年期間都會於審計新村與大家度過喔😊除了除夕當天休息外2月份每日都會出攤滴～">各位好久不見👋<br>
-2月農曆過年期間都會於審計新村與大家度過喔😊<br>
-除了除夕當天休息外<br>
-2月份每日都會出攤滴～</h2>
-<h2 id="另外許多人私訊詢問的草莓口味🍓因進貨成本時常不固定有時成本真的太高製作每一杯草莓的量真的都不少老闆我也不敢賣太貴給各位😅因此如有供應都會提前發佈於限動還請草莓愛好的各位再關注一下囉～">另外許多人私訊詢問的草莓口味🍓<br>
-因進貨成本時常不固定有時成本真的太高製作每一杯草莓的量真的都不少老闆我也不敢賣太貴給各位😅<br>
-因此如有供應都會提前發佈於限動還請草莓愛好的各位再關注一下囉～</h2>
-<p>🔺出攤時間平日 13：00～18：00<br>
-假日 10：30～18：00<br>
-如有休假會在另行公告🙌🏻</p>
+        </ul>
+      </div>
+      <div class="info">
+        <div class="date">2021/2/8</div>
+      </div>
+      <div class="title">
+        <h1>私房限定『草莓青飲』</h1>
+      </div>
+      <div class="content" v-pre><p>各位好久不見👋<br>
+2月農曆過年期間，都會於審計新村與大家度過喔😊<br>
+除了除夕當天休息外，2月份每日都會出攤滴～</p>
+<p>另外許多人私訊詢問的草莓青飲🍓<br>
+因進貨成本時常不固定，有時成本真的太高，製作每一杯草莓的量真的都不少，老闆我也不敢賣太貴給各位😅<br>
+因此如有供應都會提前發佈於限動，還請草莓愛好的各位再關注一下囉～</p>
+<hr>
+<ul>
+<li>🕐 <strong>出攤時間</strong></li>
+<li>平日 13:00～18:00</li>
+<li>假日 10:30～18:00</li>
+<li>如有休假再另行公告 🙌🏻</li>
+</ul>
 <p><img src="../assets/images/2021%E4%BA%8C%E6%9C%88%E5%87%BA%E6%94%A4%E8%A1%A8.png" alt=""></p>
 </div>
+    </div>
   </div>
  <footer>
   <div class="container">
@@ -280,7 +299,9 @@
       </div>
       
     </div>
-    <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script> -->
     <script src="/Rinskings/js/main.js"></script>
   </body>
 </html>

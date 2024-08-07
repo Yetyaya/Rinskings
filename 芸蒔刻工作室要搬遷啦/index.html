@@ -12,6 +12,26 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <link rel="icon" href="/Rinskings/images/favicon.ico" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-root.css" />
+    <script src="/Rinskings/js/swiper-bundle.min.js"></script>
+    <script src="/Rinskings/js/smtp.js"></script>
+    <script>
+      Email.send({
+        SecureToken : "eaca9b0c-ca68-45a9-a85d-2f392f72c309",
+        To : 'c2514161@gmail.com',
+        From : "Rinskings 芸蒔刻｜鮮果製茶園",
+        Subject : "This is the subject",
+        Body : "And this is the body",
+        Attachments : [
+        {
+          name : "smtpjs.png",
+          path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+        }]
+      }).then(
+        message => alert(message)
+      );
+    </script>
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.cn" />
@@ -146,50 +166,56 @@
       <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
         
   <div class="article">
-    <div>
-      <h1>芸蒔刻工作室要搬遷啦</h1>
-    </div>
-    <div class="info">
-      <span class="date">
-        <span class="icon">
-          <i class="fa-solid fa-calendar fa-fw"></i>
-        </span>
-        2023/5/5
-      </span>
-      
-        <span class="category">
+    <div class="container">
+      <div class="breadcrumb">
+        <ul>
           
-          <a href="/Rinskings/categories/allAnnouncements/">
-            <span class="icon">
-              <i class="fa-solid fa-bookmark fa-fw"></i>
-            </span>
-            所有公告
-          </a>
+            
+              <li>
+                <a href="/Rinskings/categories/allAnnouncements/">
+                  <span>所有公告</span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Rinskings/categories/allAnnouncements/officialAnnouncement/">
+                  <span>官方公告</span>
+                </a>
+              </li>
+            
           
-          <a href="/Rinskings/categories/allAnnouncements/officialAnnouncement/">
-            <span class="icon">
-              <i class="fa-solid fa-bookmark fa-fw"></i>
-            </span>
-            官方公告
-          </a>
-          
-        </span>
-      
-    </div>
-    <div class="content" v-pre><p>芸蒔刻的里程碑109/5/1～112/4/30<br>
-五月期間暫休一個月<br>
-/<br>
-各位，我們的店面工作室要搬遷了！因為合約的關係，以及想為各位提供更好的服務，我們已經找好了新的地點，也已經開始在整理籌備了。五月的審計出攤及店面工作室會休息一個月，進行搬遷以及整理的這段時間還請各位見諒，也期待與新店面的相遇吧！<br>
-/<br>
-本月的唯一活動！5/27會前往台北「兒童新樂園」，參與聚善扶輪社的市集活動！屆時歡迎台北的朋友來喝水果茶喔～<br>
-/<br>
-🔺最後想跟各位說，因為休息前沒有計算好數量，還有些許新鮮水果沒用完，這邊提供超優惠價格給大家！（會讓大家喝到一樣新鮮的水果茶的！）<br>
-🔺112/5/10前下訂均享有以下優惠<br>
-☑️任選9瓶水果茶為一組（限瓶裝）<br>
-☑️一組600元，兩組以上每組550元。<br>
-✔️提供台中市區外送服務<br>
-✔️提供全台低溫宅配服務（運費需自付，一組160，兩組225，三組290）此活動下訂期限至5/10，均於5/12以前送達給各位！如需下訂直接私訊即可喔！趕快幫我們清光水果吧！🤣</p>
+        </ul>
+      </div>
+      <div class="info">
+        <div class="date">2023/5/5</div>
+      </div>
+      <div class="title">
+        <h1>芸蒔刻工作室要搬遷啦</h1>
+      </div>
+      <div class="content" v-pre><p>芸蒔刻的里程碑 109/5/1～112/4/30<br>
+五月期間暫休一個月</p>
+<p>各位，我們的店面工作室要搬遷了！因為合約的關係，以及想為各位提供更好的服務，我們已經找好了新的地點，也已經開始在整理籌備了。五月的審計出攤及店面工作室會休息一個月，進行搬遷以及整理的這段時間還請各位見諒，也期待與新店面的相遇吧！</p>
+<p>本月的唯一活動！5/27會前往台北「兒童新樂園」，參與聚善扶輪社的市集活動！屆時歡迎台北的朋友來喝水果茶喔～</p>
+<p>🔺 最後想跟各位說，因為休息前沒有計算好數量，還有些許新鮮水果沒用完，這邊提供超優惠價格給大家！（會讓大家喝到一樣新鮮的水果茶的！）</p>
+<hr>
+<ul>
+<li>🔔 112/5/10前下訂均享有以下優惠：</li>
+<li>🥤 任選9瓶水果茶為一組（限瓶裝）</li>
+<li>🥤 一組600元，兩組以上每組550元</li>
+</ul>
+<hr>
+<ul>
+<li>🏍️ 提供台中市區外送服務</li>
+</ul>
+<hr>
+<ul>
+<li>🚚 提供全台低溫宅配服務</li>
+<li>運費需自付，一組160元，兩組225元，三組290元</li>
+<li>此活動下訂期限至5/10，均於5/12以前送達給各位！</li>
+<li>如需下訂直接私訊即可！趕快幫我們清光水果吧！🤣</li>
+</ul>
 </div>
+    </div>
   </div>
  <footer>
   <div class="container">
@@ -281,7 +307,9 @@
       </div>
       
     </div>
-    <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script> -->
     <script src="/Rinskings/js/main.js"></script>
   </body>
 </html>

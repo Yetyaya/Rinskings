@@ -12,6 +12,26 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <link rel="icon" href="/Rinskings/images/favicon.ico" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-root.css" />
+    <script src="/Rinskings/js/swiper-bundle.min.js"></script>
+    <script src="/Rinskings/js/smtp.js"></script>
+    <script>
+      Email.send({
+        SecureToken : "eaca9b0c-ca68-45a9-a85d-2f392f72c309",
+        To : 'c2514161@gmail.com',
+        From : "Rinskings 芸蒔刻｜鮮果製茶園",
+        Subject : "This is the subject",
+        Body : "And this is the body",
+        Attachments : [
+        {
+          name : "smtpjs.png",
+          path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+        }]
+      }).then(
+        message => alert(message)
+      );
+    </script>
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.cn" />
@@ -146,47 +166,39 @@
       <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
         
   <div class="article">
-    <div>
-      <h1>新年新氣象！新店面營業啦！</h1>
-    </div>
-    <div class="info">
-      <span class="date">
-        <span class="icon">
-          <i class="fa-solid fa-calendar fa-fw"></i>
-        </span>
-        2024/1/5
-      </span>
-      
-        <span class="category">
+    <div class="container">
+      <div class="breadcrumb">
+        <ul>
           
-          <a href="/Rinskings/categories/allAnnouncements/">
-            <span class="icon">
-              <i class="fa-solid fa-bookmark fa-fw"></i>
-            </span>
-            所有公告
-          </a>
+            
+              <li>
+                <a href="/Rinskings/categories/allAnnouncements/">
+                  <span>所有公告</span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="/Rinskings/categories/allAnnouncements/officialAnnouncement/">
+                  <span>官方公告</span>
+                </a>
+              </li>
+            
           
-          <a href="/Rinskings/categories/allAnnouncements/officialAnnouncement/">
-            <span class="icon">
-              <i class="fa-solid fa-bookmark fa-fw"></i>
-            </span>
-            官方公告
-          </a>
-          
-        </span>
-      
-    </div>
-    <div class="content" v-pre><p>這是一篇遲來的店面文及新年文<br>
-///即日起至店面消費，全品項9折///<br>
-/<br>
-感謝2023的你們，2024還請繼續關照<br>
-/<br>
-芸蒔刻的2023年真的很忙碌。外縣市的出攤，見到了許多老面孔，也認識了很多新朋友。舊工作室的合約到期，再到新店面的搬遷及重新裝修。很感謝各位這段時間的等待。尤其看到許多老客人，特地前來新店面光顧，心中真的滿滿的感動。<br>
-/<br>
-2024這年，芸蒔刻會更努力扎根，把店面慢慢經營起來，各位也別吝嗇前來，歡迎讓老闆忙不停吧！<br>
-/<br>
-即日起至2/29，至店面消費通通都打九折喔！店面有提供更多品項供各位選擇！真心推薦水果那堤系列！真的很讚！</p>
+        </ul>
+      </div>
+      <div class="info">
+        <div class="date">2024/1/5</div>
+      </div>
+      <div class="title">
+        <h1>新年新氣象！新店面營業啦！</h1>
+      </div>
+      <div class="content" v-pre><p>這是一篇遲來的店面文及新年文。<br>感謝2023的你們，2024還請繼續關照。</p>
+<p>芸蒔刻的2023年真的很忙碌。</p>
+<p>外縣市的出攤，見到了許多老面孔，也認識了很多新朋友。舊工作室的合約到期，再到新店面的搬遷及重新裝修。很感謝各位這段時間的等待，尤其看到許多老客人，特地前來新店面光顧，心中真的滿滿的感動。</p>
+<p>2024這年，芸蒔刻會更努力扎根，把店面慢慢經營起來，各位也別吝嗇前來，歡迎讓老闆忙不停吧！</p>
+<p>即日起至2/29，至店面消費通通都打九折喔！店面有提供更多品項供各位選擇！真心推薦水果那堤系列！真的很讚！</p>
 </div>
+    </div>
   </div>
  <footer>
   <div class="container">
@@ -278,7 +290,9 @@
       </div>
       
     </div>
-    <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script> -->
     <script src="/Rinskings/js/main.js"></script>
   </body>
 </html>
