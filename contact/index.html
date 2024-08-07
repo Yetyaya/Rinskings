@@ -159,7 +159,7 @@
       </div>
       <div class="en">Contact Us</div>
     </section>
-    <form action="" method="post" autocomplete="off">
+    <form method="post" autocomplete="off">
       <fieldset>
         <input type="text" name="name" placeholder="請輸入您的姓名">
         <legend>您的姓名</legend>
@@ -168,10 +168,10 @@
         <input type="tel" name="phone" placeholder="請輸入您的手機號碼">
         <legend>聯絡電話</legend>
       </fieldset>
-      <fieldset>
+      <!-- <fieldset>
         <input type="email" name="email" placeholder="請輸入您的信箱">
         <legend>電子信箱</legend>
-      </fieldset>
+      </fieldset> -->
       <fieldset>
         <select name="contactTheme">
           <option value="意見反應">意見反應</option>
@@ -187,7 +187,7 @@
         <legend>留言內容</legend>
       </fieldset>
       <section class="btn">
-        <button class="submit" type="submit" @click="sendEmail()">確認送出</button>
+        <button class="submit" type="button" @click="sendEmail()">確認送出</button>
       </section>
     </form>
   </div>

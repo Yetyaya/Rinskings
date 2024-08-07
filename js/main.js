@@ -185,14 +185,14 @@ const app = Vue.createApp({
       Email.send({
         SecureToken : "eaca9b0c-ca68-45a9-a85d-2f392f72c309",
         To : 'c2514161@gmail.com',
-        From : "Rinskings 芸蒔刻｜鮮果製茶園",
+        From : "Rinskings 芸蒔刻｜鮮果製茶園<c2514161@gmail.com>",
         Subject : "This is the subject",
         Body : "And this is the body",
-        Attachments : [
-        {
-          name : "smtpjs.png",
-          path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
-        }]
+        // Attachments : [
+        // {
+        //   name : "smtpjs.png",
+        //   path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+        // }]
       }).then(
         message => alert(message)
       )
