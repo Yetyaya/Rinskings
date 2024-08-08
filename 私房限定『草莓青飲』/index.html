@@ -15,7 +15,29 @@
     <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-root.css" />
     <script src="/Rinskings/js/swiper-bundle.min.js"></script>
-    <script src="/Rinskings/js/smtp.js"></script>
+    <script src="/Rinskings/js/email.min.js"></script>
+    <!-- <script type="text/javascript">
+      (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "hqZ4VZdmkOXEoQWgt",
+        });
+      })();
+    </script> -->
+    <!-- <script type="text/javascript">
+      window.onload = function() {
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // these IDs from the previous steps
+          emailjs.sendForm('service_gnzh6ol', 'template_64o3qyj', this)
+            .then(() => {
+              console.log('SUCCESS!');
+            }, (error) => {
+              console.log('FAILED...', error);
+            });
+          });
+      }
+    </script> -->
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.cn" />

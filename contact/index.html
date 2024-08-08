@@ -15,7 +15,29 @@
     <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-root.css" />
     <script src="/Rinskings/js/swiper-bundle.min.js"></script>
-    <script src="/Rinskings/js/smtp.js"></script>
+    <script src="/Rinskings/js/email.min.js"></script>
+    <!-- <script type="text/javascript">
+      (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "hqZ4VZdmkOXEoQWgt",
+        });
+      })();
+    </script> -->
+    <!-- <script type="text/javascript">
+      window.onload = function() {
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // these IDs from the previous steps
+          emailjs.sendForm('service_gnzh6ol', 'template_64o3qyj', this)
+            .then(() => {
+              console.log('SUCCESS!');
+            }, (error) => {
+              console.log('FAILED...', error);
+            });
+          });
+      }
+    </script> -->
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.cn" />
@@ -159,21 +181,22 @@
       </div>
       <div class="en">Contact Us</div>
     </section>
-    <form method="post" autocomplete="off">
+    <form id="contactForm" method="post" autocomplete="off">
       <fieldset>
-        <input type="text" name="name" placeholder="請輸入您的姓名">
+        <input type="text" name="name" placeholder="請輸入您的姓名" v-model.trim="guest.name" :class="[{ default: formVerification.name === null }, formVerification.name ? 'check' : 'error']" required>
         <legend>您的姓名</legend>
       </fieldset>
       <fieldset>
-        <input type="tel" name="phone" placeholder="請輸入您的手機號碼">
+        <input type="tel" name="phone" placeholder="請輸入您的手機號碼" v-model.trim="guest.phone" :class="[{ default: formVerification.phone === null }, formVerification.phone ? 'check' : 'error']" required>
         <legend>聯絡電話</legend>
       </fieldset>
-      <!-- <fieldset>
-        <input type="email" name="email" placeholder="請輸入您的信箱">
-        <legend>電子信箱</legend>
-      </fieldset> -->
       <fieldset>
-        <select name="contactTheme">
+        <input type="email" name="email" placeholder="請輸入您的信箱" v-model.trim="guest.email" :class="[{ default: formVerification.email === null }, formVerification.email ? 'check' : 'error']" required>
+        <legend>電子信箱</legend>
+      </fieldset>
+      <fieldset>
+        <select name="contactTheme" v-model="guest.theme">
+          <option value="宅配訂購">宅配訂購</option>
           <option value="意見反應">意見反應</option>
           <option value="客服申訴">客服申訴</option>
           <option value="廠商接洽">廠商接洽</option>
@@ -183,7 +206,7 @@
         <legend>留言主題</legend>
       </fieldset>
       <fieldset>
-        <textarea name="remarks" placeholder="您想和芸蒔刻說什麼呢"></textarea>
+        <textarea name="remarks" placeholder="想和芸蒔刻說些什麼呢" v-model.trim="guest.message" :class="[{ default: formVerification.message === null }, formVerification.message ? 'check' : 'error']" required></textarea>
         <legend>留言內容</legend>
       </fieldset>
       <section class="btn">

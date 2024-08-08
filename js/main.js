@@ -87,7 +87,20 @@ const app = Vue.createApp({
         { name: '愛文芒果', category: { cn: '果物', en: 'Organic Fruits' }, desc: '果肉金黃，皮薄肉嫩，香味濃郁多汁，高甜又帶有點微酸滋味，十分香甜好吃，是人人皆知也最受歡迎的水果品種之一。', place: '臺灣在地果園', img: 'fruit8' },
         { name: '西瓜', category: { cn: '果物', en: 'Organic Fruits' }, desc: '西瓜風味香甜，不含脂肪外，還富含維生素A、B、C，胡蘿蔔素、鉀及鐵等礦物質與水溶性纖維，果肉多汁細緻，清甜爽口，是夏日消暑解渴首選的水果之一。', place: '臺灣在地果園', img: 'fruit9' },
         { name: '全脂鮮乳', category: { cn: '鮮乳', en: 'Whole Milk' }, desc: '台灣第一瓶榮獲國際雙保證的品牌，以極鮮溫控技術給予牧場直送般的新鮮，讓人喝了不自覺露出幸福滿意的笑容。', place: '福樂一番鮮', img: 'milk' }
-      ]
+      ],
+      guest: {
+        name: '',
+        phone: '',
+        email: '',
+        theme: '宅配訂購',
+        message: ''
+      },
+      formVerification: {
+        name: null,
+        phone: null,
+        email: null,
+        message: null
+      }
     }
   },
   created () {
@@ -132,6 +145,11 @@ const app = Vue.createApp({
         }
       },
     })
+
+    // 聯絡我們 郵件設定
+    emailjs.init({
+      publicKey: "hqZ4VZdmkOXEoQWgt",
+    });
   },
   methods: {
     render () {
@@ -181,22 +199,82 @@ const app = Vue.createApp({
       }, 1000);
     },
     sendEmail () {
-      console.log('email test')
-      Email.send({
-        SecureToken : "eaca9b0c-ca68-45a9-a85d-2f392f72c309",
-        To : 'c2514161@gmail.com',
-        From : "Rinskings 芸蒔刻｜鮮果製茶園<c2514161@gmail.com>",
-        Subject : "This is the subject",
-        Body : "And this is the body",
-        // Attachments : [
-        // {
-        //   name : "smtpjs.png",
-        //   path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
-        // }]
-      }).then(
-        message => alert(message)
-      )
-    }
+      const that = this
+      let replyMessage = []
+      switch (that.guest.theme) {
+        case '意見反應':
+          replyMessage = ['芸蒔刻已經收到您的意見回饋。', '面對您提出的建議，我們會認真考慮並思考改進的可能性。', '感謝您花費寶貴的時間填寫這些訊息，幫助芸蒔刻更加進步。', '我們會努力把關產品品質並致力做到最好，還請您繼續支持我們，見證我們的成長💪。']
+          break;
+        case '客服申訴':
+          replyMessage = ['芸蒔刻已經收到您的意見回饋。', '面對您提出的問題，我們會仔細查驗並盡速改進。', '感謝您花費寶貴的時間填寫這些訊息，幫助芸蒔刻更加進步。', '我們會努力把關產品品質並致力做到最好，還請您繼續支持我們，見證我們的成長💪。']
+          break;
+        case '廠商接洽':
+          replyMessage = ['芸蒔刻已經收到您的合作提案訊息。', '面對您提出的建議，我們還需要一些時間仔細思考。', '感謝您花費寶貴的時間填寫這些訊息，芸蒔刻真的十分感謝您對我們的欣賞。', '未來幾天會盡速給予回覆，還請您再關注電子信箱的訊息哦。']
+          break;
+        case '異業合作':
+          replyMessage = ['芸蒔刻已經收到您的合作提案訊息。', '面對您提出的建議，我們還需要一些時間仔細思考。', '感謝您花費寶貴的時間填寫這些訊息，芸蒔刻真的十分感謝您對我們的欣賞。', '未來幾天會盡速給予回覆，還請您再關注電子信箱的訊息哦。']
+          break;
+        case '加盟諮詢':
+          replyMessage = ['芸蒔刻已經收到您的加盟訊息。', '面對您提出的詢問，我們還需要一些時間仔細思考。', '感謝您花費寶貴的時間填寫這些訊息，芸蒔刻真的十分感謝您對我們的欣賞。', '未來幾天會盡速給予回覆，還請您再關注電子信箱的訊息哦。']
+          break;
+        default:
+          replyMessage = ['芸蒔刻已經收到您的訂購資訊，將盡速出貨。', '未來幾天再請您關注宅配收取的相關訊息哦。']
+          break;
+      }
+      const verification = Object.values(this.formVerification)
+      console.log(verification)
+      if (verification.indexOf(false) === -1 && verification.indexOf(null) === -1) {
+        emailjs.send("service_gnzh6ol","template_64o3qyj",{
+          name: that.guest.name,
+          phone: that.guest.phone,
+          email: that.guest.email,
+          theme: that.guest.theme,
+          message: that.guest.message,
+          replyMessage: replyMessage
+        })
+          .then(() => {
+            this.guest.name = ''
+            this.guest.phone = ''
+            this.guest.email = ''
+            this.guest.theme = '宅配訂購'
+            this.guest.message = ''
+            Object.values(this.formVerification).forEach((item,id) => {
+              if (item === null) {
+                that.formVerification[Object.keys(that.formVerification)[id]] = null
+              }
+            })
+            replyMessage = []
+          }, (error) => {
+            console.log('FAILED...', error);
+          })
+      } else {
+        Object.values(this.formVerification).forEach((item,id) => {
+          if (item === null) {
+            that.formVerification[Object.keys(that.formVerification)[id]] = false
+          }
+        })
+      }
+    },
+  },
+  watch: {
+    'guest.name'(val) {
+      if (val === null) {
+        this.formVerification.name = null
+      } else {
+        val.length > 0 ? this.formVerification.name = true : this.formVerification.name = false
+      }
+    },
+    'guest.phone'(val) {
+      const regex = /^09[0-9]{8}$/
+      regex.test(val) ? this.formVerification.phone = true : this.formVerification.phone = false
+    },
+    'guest.email'(val) {
+      const regex = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+      regex.test(val) ? this.formVerification.email = true : this.formVerification.email = false
+    },
+    'guest.message'(val) {
+      val.length > 0 ? this.formVerification.message = true : this.formVerification.message = false
+    },
   },
 })
 
