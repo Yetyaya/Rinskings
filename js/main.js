@@ -89,18 +89,19 @@ const app = Vue.createApp({
         { name: '全脂鮮乳', category: { cn: '鮮乳', en: 'Whole Milk' }, desc: '台灣第一瓶榮獲國際雙保證的品牌，以極鮮溫控技術給予牧場直送般的新鮮，讓人喝了不自覺露出幸福滿意的笑容。', place: '福樂一番鮮', img: 'milk' }
       ],
       guest: {
-        name: '',
-        phone: '',
-        email: '',
+        name: null,
+        phone: null,
+        email: null,
         theme: '宅配訂購',
-        message: ''
+        message: null
       },
       formVerification: {
         name: null,
         phone: null,
         email: null,
         message: null
-      }
+      },
+      sendEmailAnimate: false
     }
   },
   created () {
@@ -222,7 +223,6 @@ const app = Vue.createApp({
           break;
       }
       const verification = Object.values(this.formVerification)
-      console.log(verification)
       if (verification.indexOf(false) === -1 && verification.indexOf(null) === -1) {
         emailjs.send("service_gnzh6ol","template_64o3qyj",{
           name: that.guest.name,
@@ -233,19 +233,22 @@ const app = Vue.createApp({
           replyMessage: replyMessage
         })
           .then(() => {
-            this.guest.name = ''
-            this.guest.phone = ''
-            this.guest.email = ''
-            this.guest.theme = '宅配訂購'
-            this.guest.message = ''
-            Object.values(this.formVerification).forEach((item,id) => {
-              if (item === null) {
-                that.formVerification[Object.keys(that.formVerification)[id]] = null
-              }
-            })
-            replyMessage = []
+            this.sendEmailAnimate = true
+            setTimeout(() => {
+              this.guest.name = null
+              this.guest.phone = null
+              this.guest.email = null
+              this.guest.theme = '宅配訂購'
+              this.guest.message = null
+              Object.values(this.formVerification).forEach((item,id) => {
+                if (item === null) {
+                  that.formVerification[Object.keys(that.formVerification)[id]] = null
+                }
+              })
+              replyMessage = []
+            }, 500)
           }, (error) => {
-            console.log('FAILED...', error);
+            console.log('FAILED...', error)
           })
       } else {
         Object.values(this.formVerification).forEach((item,id) => {
@@ -254,26 +257,38 @@ const app = Vue.createApp({
           }
         })
       }
-    },
+    }
   },
   watch: {
     'guest.name'(val) {
       if (val === null) {
         this.formVerification.name = null
       } else {
-        val.length > 0 ? this.formVerification.name = true : this.formVerification.name = false
+        val.length ? this.formVerification.name = true : this.formVerification.name = false
       }
     },
     'guest.phone'(val) {
       const regex = /^09[0-9]{8}$/
-      regex.test(val) ? this.formVerification.phone = true : this.formVerification.phone = false
+      if (val === null) {
+        this.formVerification.phone = null
+      } else {
+        regex.test(val) ? this.formVerification.phone = true : this.formVerification.phone = false
+      }
     },
     'guest.email'(val) {
       const regex = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
-      regex.test(val) ? this.formVerification.email = true : this.formVerification.email = false
+      if (val === null) {
+        this.formVerification.email = null
+      } else {
+        regex.test(val) ? this.formVerification.email = true : this.formVerification.email = false
+      }
     },
     'guest.message'(val) {
-      val.length > 0 ? this.formVerification.message = true : this.formVerification.message = false
+      if (val === null) {
+        this.formVerification.message = null
+      } else {
+        val.length > 0 ? this.formVerification.message = true : this.formVerification.message = false
+      }
     },
   },
 })

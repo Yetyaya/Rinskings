@@ -181,7 +181,7 @@
       </div>
       <div class="en">Contact Us</div>
     </section>
-    <form id="contactForm" method="post" autocomplete="off">
+    <form id="contactForm" method="post" autocomplete="off" :class="{ fadeOutUp: sendEmailAnimate }">
       <fieldset>
         <input type="text" name="name" placeholder="請輸入您的姓名" v-model.trim="guest.name" :class="[{ default: formVerification.name === null }, formVerification.name ? 'check' : 'error']" required>
         <legend>您的姓名</legend>
@@ -209,11 +209,18 @@
         <textarea name="remarks" placeholder="想和芸蒔刻說些什麼呢" v-model.trim="guest.message" :class="[{ default: formVerification.message === null }, formVerification.message ? 'check' : 'error']" required></textarea>
         <legend>留言內容</legend>
       </fieldset>
-      <section class="btn">
-        <button class="submit" type="button" @click="sendEmail()">確認送出</button>
-      </section>
     </form>
+    <section class="btn" :class="{ bounceOutDown: sendEmailAnimate }">
+      <button class="submit" type="button" @click="sendEmail()">確認送出</button>
+    </section>
   </div>
+  <section class="recieveMessage" :class="{ show: sendEmailAnimate }">
+    <img src="/Rinskings/images/contact/contact.png" alt="芸蒔刻">
+    <div class="text">
+      <h4>您的訊息已經送出</h4>
+      <p>如有後續相關事項會盡速與您聯絡，記得查看電子信箱哦～</p>
+    </div>
+  </section>
 </div>
  <footer>
   <div class="container">
