@@ -3,7 +3,7 @@
 <html lang="zh-tw">
   <head>
     <meta charset="utf-8" />
-    <title>『奇異菓茶』，炎夏熱銷推薦 | Rinskings 芸蒔刻｜鮮果製茶園</title>
+    <title>Rinskings 芸蒔刻｜鮮果製茶園</title>
     <meta name="author" content="Rinskings" />
     <meta name="description" content="改變你對水果茶的定義" />
     <meta name="keywords" content="Rinskings, 芸蒔刻, 水果茶, 果汁, 冰沙, 新鮮現榨, 原汁, 審計新村, 審計新村必買, 審計新村推薦, 飲料, 飲品, 外送, 菜單, 飲料外送, 大量, 季節限定, 嚴選, 純粹" />
@@ -16,36 +16,15 @@
     <link rel="stylesheet" href="/Rinskings/css/swiper/swiper-root.css" />
     <script src="/Rinskings/js/swiper-bundle.min.js"></script>
     <script src="/Rinskings/js/email.min.js"></script>
-    <!-- <script type="text/javascript">
-      (function() {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init({
-          publicKey: "hqZ4VZdmkOXEoQWgt",
-        });
-      })();
-    </script> -->
-    <!-- <script type="text/javascript">
-      window.onload = function() {
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-          event.preventDefault();
-          // these IDs from the previous steps
-          emailjs.sendForm('service_gnzh6ol', 'template_64o3qyj', this)
-            .then(() => {
-              console.log('SUCCESS!');
-            }, (error) => {
-              console.log('FAILED...', error);
-            });
-          });
-      }
-    </script> -->
-    <link rel="preconnect" href="https://s4.zstatic.net" />
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.cn" />
-<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
-/>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/Rinskings/css/fontawesome/css/all.min.css"/>
+<link rel="stylesheet" href="/Rinskings/css/main.css" />
+
 <script>
   const mixins = {};
 </script>
@@ -53,15 +32,6 @@
 
 
 
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/Rinskings/css/fontawesome/css/all.min.css"/>
-<link rel="stylesheet" href="/Rinskings/css/main.css" />
 
 
   <meta name="generator" content="Hexo 7.3.0"></head>
@@ -110,7 +80,7 @@
     </a>
     <div class="menu">
       
-        <a href="/Rinskings/" :class="{ active: currentPath == '' }">最新消息</a>
+        <a href="/Rinskings/categories/allAnnouncements" :class="{ active: currentPath == 'categories' }">最新消息</a>
       
         <a href="/Rinskings/brand" :class="{ active: currentPath == 'brand' }">品牌故事</a>
       
@@ -144,7 +114,7 @@
     <transition name="slide">
       <div class="menu" v-show="showMenuItems">
         
-        <a href="/Rinskings/">最新消息</a>
+        <a href="/Rinskings/categories/allAnnouncements">最新消息</a>
         
         <a href="/Rinskings/brand">品牌故事</a>
         
@@ -224,7 +194,7 @@
       <ul class="list">
         
           <li>
-            <a href="/Rinskings/">最新消息</a>
+            <a href="/Rinskings/categories/allAnnouncements">最新消息</a>
           </li>
         
           <li>
@@ -288,7 +258,7 @@
     <div class="copyright">
       <div>
         <span>
-          Copyright &copy; 2017 - 2024 Rinskings 芸蒔刻｜鮮果製茶園 . All rights reserved.
+          Copyright &copy; 2018 - 2024 Rinskings 芸蒔刻｜鮮果製茶園 . All rights reserved.
         </span>
       </div>
       <div>
@@ -303,7 +273,6 @@
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- <script type="text/javascript" src="/Rinskings/js/skrollr.min.js"></script> -->
     <script src="/Rinskings/js/main.js"></script>
   </body>
 </html>
