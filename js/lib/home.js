@@ -7,8 +7,8 @@ mixins.home = {
         this.menuColor = true;
     },
     methods: {
-        homeClick() {
-            window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
-        },
+        // homeClick() {
+        //     window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+        // },
     },
 };

@@ -33,6 +33,16 @@
   <meta name="generator" content="Hexo 7.3.0"></head>
   <body>
     <div id="layout">
+      <transition>
+        <div class="floatGroup">
+          <a class="panda" href="https://www.foodpanda.com.tw/restaurant/tz7z/rinskingsyun-shi-ke-xian-guo-zhi-cha-yuan" target="_blank">
+            <div class="img"></div>
+          </a>
+          <a class="uberEat" href="https://www.ubereats.com/tw/store/rinskings%E8%8A%B8%E8%92%94%E5%88%BB-%E9%AE%AE%E6%9E%9C%E8%A3%BD%E8%8C%B6%E5%9C%92/yPl-wBcHUAW8X6TiKiknpA?ps=1" target="_blank">
+            <div class="img"></div>
+          </a>
+        </div>
+      </transition>
       <transition name="fade">
         <div id="loading" v-show="loading">
   <div class="loadingImg">
@@ -110,17 +120,17 @@
     <transition name="slide">
       <div class="menu" v-show="showMenuItems">
         
-        <a href="/Rinskings/categories/allAnnouncements">最新消息</a>
+          <a href="/Rinskings/categories/allAnnouncements">最新消息</a>
         
-        <a href="/Rinskings/brand">品牌故事</a>
+          <a href="/Rinskings/brand">品牌故事</a>
         
-        <a href="/Rinskings/menu">飲品菜單</a>
+          <a href="/Rinskings/menu">飲品菜單</a>
         
-        <a href="/Rinskings/ingredients">嚴選食材</a>
+          <a href="/Rinskings/ingredients">嚴選食材</a>
         
-        <a href="/Rinskings/stores">門市資訊</a>
+          <a href="/Rinskings/stores">門市資訊</a>
         
-        <a href="/Rinskings/contact">聯絡我們</a>
+          <a href="/Rinskings/contact">聯絡我們</a>
         
       </div>
     </transition>
@@ -137,8 +147,15 @@
 
       <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
         <div id="archives">
-  
-  <div class="container">
+  <section class="title">
+    <div class="cn">
+      <hr>
+      <h2>最新消息</h2>
+      <hr>
+    </div>
+    <div class="en">NEWS</div>
+  </section>
+  <div class="container" v-if="screenWidth > 500">
     <div class="categoriesTags">
       
       
@@ -640,8 +657,707 @@
       </div>
     </transition>
   </div>
+  <div class="container" v-else-if="screenWidth <= 500">
+    <div class="categoriesTags">
+      
+      
+        <div class="label" :class="{ active: currentCategory == '所有公告' }" @click="currentCategory = '所有公告'; vueCurrent = 1" :data-category="'所有公告'">所有公告</div>
+        
+      
+        <div class="label" :class="{ active: currentCategory == '新品上市' }" @click="currentCategory = '新品上市'; vueCurrent = 1" :data-category="'新品上市'">新品上市</div>
+        
+      
+        <div class="label" :class="{ active: currentCategory == '官方公告' }" @click="currentCategory = '官方公告'; vueCurrent = 1" :data-category="'官方公告'">官方公告</div>
+        
+      
+        <div class="label" :class="{ active: currentCategory == '優惠活動' }" @click="currentCategory = '優惠活動'; vueCurrent = 1" :data-category="'優惠活動'">優惠活動</div>
+        
+      
+        <div class="label" :class="{ active: currentCategory == '出攤資訊' }" @click="currentCategory = '出攤資訊'; vueCurrent = 1" :data-category="'出攤資訊'">出攤資訊</div>
+        
+      
+    </div>
+    <transition name="tran">
+      <div v-if="currentCategory === '所有公告'">
+        <div class="newsList">
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '0'">
+                
+                  <li>
+                    <a href="/Rinskings/%E5%85%AD%E9%80%B1%E5%B9%B4%EF%BC%81%E5%BA%97%E9%9D%A2%E6%B4%BB%E5%8B%95%E9%96%8B%E8%B7%91%EF%BC%81/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/promotions/20240402.jpg" alt="六週年！店面活動開跑！">
+                      </div>
+                      <div class="title">
+                        <h3>六週年！店面活動開跑！</h3>
+                        <div class="date">2024/4/2</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '1'">
+                
+                  <li>
+                    <a href="/Rinskings/%E6%96%B0%E5%B9%B4%E6%96%B0%E6%B0%A3%E8%B1%A1%EF%BC%81%E6%96%B0%E5%BA%97%E9%9D%A2%E7%87%9F%E6%A5%AD%E5%95%A6%EF%BC%81/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/officialAnnouncement/20240105.jpg" alt="新年新氣象！新店面營業啦！">
+                      </div>
+                      <div class="title">
+                        <h3>新年新氣象！新店面營業啦！</h3>
+                        <div class="date">2024/1/5</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '2'">
+                
+                  <li>
+                    <a href="/Rinskings/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%9D%A2%E7%99%BC%E5%B1%95/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/officialAnnouncement/20231108.jpg" alt="近期店面發展">
+                      </div>
+                      <div class="title">
+                        <h3>近期店面發展</h3>
+                        <div class="date">2023/11/8</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '3'">
+                
+                  <li>
+                    <a href="/Rinskings/%E8%8A%B8%E8%92%94%E5%88%BB%E5%B7%A5%E4%BD%9C%E5%AE%A4%E8%A6%81%E6%90%AC%E9%81%B7%E5%95%A6/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/officialAnnouncement/20230505.jpg" alt="芸蒔刻工作室要搬遷啦">
+                      </div>
+                      <div class="title">
+                        <h3>芸蒔刻工作室要搬遷啦</h3>
+                        <div class="date">2023/5/5</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '4'">
+                
+                  <li>
+                    <a href="/Rinskings/%E5%AD%A3%E7%AF%80%E9%99%90%E5%AE%9A%E3%80%8E%E6%B0%B4%E6%A2%A8%E8%8F%93%E8%8C%B6%E3%80%8F/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/newArrivals/20221005.jpg" alt="季節限定『水梨菓茶』">
+                      </div>
+                      <div class="title">
+                        <h3>季節限定『水梨菓茶』</h3>
+                        <div class="date">2022/10/5</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '5'">
+                
+                  <li>
+                    <a href="/Rinskings/%E3%80%8E%E5%A5%87%E7%95%B0%E8%8F%93%E8%8C%B6%E3%80%8F%EF%BC%8C%E7%82%8E%E5%A4%8F%E7%86%B1%E9%8A%B7%E6%8E%A8%E8%96%A6/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/newArrivals/20220408.jpg" alt="『奇異菓茶』，炎夏熱銷推薦">
+                      </div>
+                      <div class="title">
+                        <h3>『奇異菓茶』，炎夏熱銷推薦</h3>
+                        <div class="date">2022/4/8</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '6'">
+                
+                  <li>
+                    <a href="/Rinskings/%E7%A7%81%E6%88%BF%E9%99%90%E5%AE%9A%E3%80%8E%E8%8D%89%E8%8E%93%E9%9D%92%E9%A3%B2%E3%80%8F/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/newArrivals/20210208.jpg" alt="私房限定『草莓青飲』">
+                      </div>
+                      <div class="title">
+                        <h3>私房限定『草莓青飲』</h3>
+                        <div class="date">2021/2/8</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '7'">
+                
+                  <li>
+                    <a href="/Rinskings/%E3%80%8E%E7%99%BE%E9%A6%99%E9%9D%92%E9%A3%B2%E3%80%8F%E5%9B%9B%E5%AD%A3%E4%BE%9B%E6%87%89/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/newArrivals/20201020.jpg" alt="『百香青飲』四季供應">
+                      </div>
+                      <div class="title">
+                        <h3>『百香青飲』四季供應</h3>
+                        <div class="date">2020/10/20</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '8'">
+                
+                  <li>
+                    <a href="/Rinskings/%E3%80%8E%E9%87%91%E8%8A%92%E9%9D%92%E9%A3%B2%E3%80%8F%E7%8F%BE%E6%AD%A3%E7%86%B1%E8%B3%A3%E4%B8%AD/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/newArrivals/20200610.jpg" alt="『金芒青飲』現正熱賣中">
+                      </div>
+                      <div class="title">
+                        <h3>『金芒青飲』現正熱賣中</h3>
+                        <div class="date">2020/6/10</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '9'">
+                
+                  <li>
+                    <a href="/Rinskings/%E7%A5%9D%E5%85%A8%E5%A4%A9%E4%B8%8B%E5%AA%BD%E5%AA%BD%E2%9D%A4%EF%B8%8F%E6%AF%8D%E8%A6%AA%E7%AF%80%E5%BF%AB%E6%A8%82/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/officialAnnouncement/20200508.jpg" alt="祝全天下媽媽❤️母親節快樂">
+                      </div>
+                      <div class="title">
+                        <h3>祝全天下媽媽❤️母親節快樂</h3>
+                        <div class="date">2020/5/8</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '10'">
+                
+                  <li>
+                    <a href="/Rinskings/%E4%B8%89%E6%9C%88%E5%87%BA%E6%94%A4%F0%9F%94%A5%E5%BC%98%E5%85%89%E7%A7%91%E5%A4%A7%E6%A0%A1%E5%9C%92%E5%B8%82%E9%9B%86/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/officialAnnouncement/20200303.jpg" alt="三月出攤🔥弘光科大校園市集">
+                      </div>
+                      <div class="title">
+                        <h3>三月出攤🔥弘光科大校園市集</h3>
+                        <div class="date">2020/3/3</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+        </div>
+        <!-- 頁數 -->
+        
+          <div class="pagination" :class="{ 'transitionPrev': newsPrev, 'transitionNext': newsNext, 'prevEnd': prevNone, 'nextEnd': nextNone }">
+  <svg class="btn btnPrev" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg" @click="transitionPrev()">
+    <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
+    <path d="M0-.5h24v24H0z" fill="none"/>
+  </svg>
+  
+  <div class="paginationContainer">
+    <div class="littleDot littleDotFirst"></div>
+    <div class="littleDot">
+      <div class="bigDotContainer">
+        <svg version="1.1" class="bigDot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+          <path class="st0" d="M38.8,13.3c-1.1-3.4-3.4-5.5-7-6.1c-2.5-0.4-4.9-0.2-7.3,0.4c-1.2,0.2-2.2,0.7-3.4,0.8c-0.7,0.2-1.5,0.2-2.2,0 c-0.7,0-1.3-0.3-2-0.5c-2.5-0.7-5.1-1.1-7.7-0.9C5,7.4,2.1,9.9,1,13.9C0.1,17.3,0.3,20.7,0.9,24c1.1,5.6,4.1,9.7,9.3,12.2 c3.5,1.7,7.1,2.6,11,2.3c0.7,0,1.4,0,2.1-0.2c0,0,0,0,0,0c1.7-0.3,4.3-1.1,5.8-1.8c0.3-0.1,0.6-0.2,0.8-0.4c0.3-0.2,0.6-0.3,0.9-0.5 c2.9-1.6,5.1-3.9,6.6-6.9c1.6-3.2,2.1-6.5,2.1-10.1C39.6,16.9,39.4,15.1,38.8,13.3z"/>
+          <path class="st0" d="M22.2,25.9c0-0.9-0.1-1.8-0.7-2.5c-0.6-0.7-1.4-0.7-2,0c-1,1.2-1,3.6,0,4.8c0.7,0.8,1.5,0.8,2.1,0 C22,27.6,22.2,26.8,22.2,25.9z"/>
+          <path class="st1" d="M38.8,13.3c-1.1-3.4-3.4-5.5-7-6.1c-2.5-0.4-4.9-0.2-7.3,0.4c0,0.1,0.1,0.3,0.3,0.3c0.7,0.1,1.4,0.3,2.1,0.5 c2.4,0.8,4.3,2.1,5.2,4.6c0.8,2.2,1.1,4.4,1.2,6.7c0.1,1.7-0.2,3.4-0.5,5.1c-1,4.9-3.4,8.9-7.3,12c-0.5,0.4-1.1,1-1.4,1.3 c-0.3,0.1-0.6,0.2-0.9,0.3c0,0,0,0,0,0c1.7-0.3,4.3-1.1,5.8-1.8c0.3-0.1,0.6-0.2,0.8-0.4c0.3-0.2,0.6-0.3,0.9-0.5 c2.9-1.6,5.1-3.9,6.6-6.9c1.6-3.2,2.1-6.5,2.1-10.1C39.6,16.9,39.4,15.1,38.8,13.3z"/>
+          <path class="st0" d="M14.2,20.4c-1,0-1.9,0.8-1.9,1.7c0,0.9,0.9,1.7,1.9,1.7c1.1,0,2-0.8,2-1.7C16.1,21.2,15.2,20.4,14.2,20.4z"/>
+          <path class="st0" d="M27,20.4c-1.1,0-1.9,0.7-2,1.6c0,0.9,0.8,1.7,1.9,1.7c1,0,1.9-0.7,2-1.6C28.9,21.3,28,20.5,27,20.4z"/>
+          <path class="st2" d="M21.1,8.5c-0.7,0.2-1.5,0.2-2.2,0c0.5-2.9,1.8-5.3,4.5-6.8c0.3-0.2,0.6-0.3,1-0.3c0.4,0,0.7,0.3,0.9,0.6 c0.2,0.4,0,0.7-0.2,1c-0.1,0.1-0.2,0.2-0.3,0.3C22.6,4.4,21.6,6.2,21.1,8.5z"/>
+          <g>
+            <path class="st4" d="M5.1,18.1c0.9,0.1,1.5-0.5,1.7-1.5c0.2-1.5,0.8-2.8,2.1-3.7c0.9-0.6,1.1-1.3,0.7-2c-0.4-0.7-1.3-1-2.2-0.5 c-2.5,1.3-3.4,3.5-3.8,5.9C3.7,17.4,4.2,18,5.1,18.1z"/>
+            <path class="st4" d="M6.1,23c0.8-0.7,0.6-2.9-0.2-3.5c-0.5-0.4-1.1-0.3-1.6-0.1c-0.7,0.3-0.9,1-0.9,1.7c0.1,0.4,0.1,0.8,0.2,1.2 C3.9,23.4,5.2,23.7,6.1,23z"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="littleDot littleDotLast"></div>
+  </div>
+  <svg class="btn btnNext" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg" @click="transitionNext(Number('11'))">
+    <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+    <path d="M0-.25h24v24H0z" fill="none"/>
+  </svg>
+</div>
+        
+      </div>
+      <div v-else-if="currentCategory === '官方公告'">
+        <div class="newsList">
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '0'">
+                
+                  <li>
+                    <a href="/Rinskings/%E6%96%B0%E5%B9%B4%E6%96%B0%E6%B0%A3%E8%B1%A1%EF%BC%81%E6%96%B0%E5%BA%97%E9%9D%A2%E7%87%9F%E6%A5%AD%E5%95%A6%EF%BC%81/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/officialAnnouncement/20240105.jpg" alt="新年新氣象！新店面營業啦！">
+                      </div>
+                      <div class="title">
+                        <h3>新年新氣象！新店面營業啦！</h3>
+                        <div class="date">2024/1/5</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '1'">
+                
+                  <li>
+                    <a href="/Rinskings/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%9D%A2%E7%99%BC%E5%B1%95/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/officialAnnouncement/20231108.jpg" alt="近期店面發展">
+                      </div>
+                      <div class="title">
+                        <h3>近期店面發展</h3>
+                        <div class="date">2023/11/8</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '2'">
+                
+                  <li>
+                    <a href="/Rinskings/%E8%8A%B8%E8%92%94%E5%88%BB%E5%B7%A5%E4%BD%9C%E5%AE%A4%E8%A6%81%E6%90%AC%E9%81%B7%E5%95%A6/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/officialAnnouncement/20230505.jpg" alt="芸蒔刻工作室要搬遷啦">
+                      </div>
+                      <div class="title">
+                        <h3>芸蒔刻工作室要搬遷啦</h3>
+                        <div class="date">2023/5/5</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '3'">
+                
+                  <li>
+                    <a href="/Rinskings/%E7%A5%9D%E5%85%A8%E5%A4%A9%E4%B8%8B%E5%AA%BD%E5%AA%BD%E2%9D%A4%EF%B8%8F%E6%AF%8D%E8%A6%AA%E7%AF%80%E5%BF%AB%E6%A8%82/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/officialAnnouncement/20200508.jpg" alt="祝全天下媽媽❤️母親節快樂">
+                      </div>
+                      <div class="title">
+                        <h3>祝全天下媽媽❤️母親節快樂</h3>
+                        <div class="date">2020/5/8</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '4'">
+                
+                  <li>
+                    <a href="/Rinskings/%E4%B8%89%E6%9C%88%E5%87%BA%E6%94%A4%F0%9F%94%A5%E5%BC%98%E5%85%89%E7%A7%91%E5%A4%A7%E6%A0%A1%E5%9C%92%E5%B8%82%E9%9B%86/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/officialAnnouncement/20200303.jpg" alt="三月出攤🔥弘光科大校園市集">
+                      </div>
+                      <div class="title">
+                        <h3>三月出攤🔥弘光科大校園市集</h3>
+                        <div class="date">2020/3/3</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+        </div>
+        <!-- 頁數 -->
+        
+          <div class="pagination" :class="{ 'transitionPrev': newsPrev, 'transitionNext': newsNext, 'prevEnd': prevNone, 'nextEnd': nextNone }">
+  <svg class="btn btnPrev" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg" @click="transitionPrev()">
+    <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
+    <path d="M0-.5h24v24H0z" fill="none"/>
+  </svg>
+  
+  <div class="paginationContainer">
+    <div class="littleDot littleDotFirst"></div>
+    <div class="littleDot">
+      <div class="bigDotContainer">
+        <svg version="1.1" class="bigDot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+          <path class="st0" d="M38.8,13.3c-1.1-3.4-3.4-5.5-7-6.1c-2.5-0.4-4.9-0.2-7.3,0.4c-1.2,0.2-2.2,0.7-3.4,0.8c-0.7,0.2-1.5,0.2-2.2,0 c-0.7,0-1.3-0.3-2-0.5c-2.5-0.7-5.1-1.1-7.7-0.9C5,7.4,2.1,9.9,1,13.9C0.1,17.3,0.3,20.7,0.9,24c1.1,5.6,4.1,9.7,9.3,12.2 c3.5,1.7,7.1,2.6,11,2.3c0.7,0,1.4,0,2.1-0.2c0,0,0,0,0,0c1.7-0.3,4.3-1.1,5.8-1.8c0.3-0.1,0.6-0.2,0.8-0.4c0.3-0.2,0.6-0.3,0.9-0.5 c2.9-1.6,5.1-3.9,6.6-6.9c1.6-3.2,2.1-6.5,2.1-10.1C39.6,16.9,39.4,15.1,38.8,13.3z"/>
+          <path class="st0" d="M22.2,25.9c0-0.9-0.1-1.8-0.7-2.5c-0.6-0.7-1.4-0.7-2,0c-1,1.2-1,3.6,0,4.8c0.7,0.8,1.5,0.8,2.1,0 C22,27.6,22.2,26.8,22.2,25.9z"/>
+          <path class="st1" d="M38.8,13.3c-1.1-3.4-3.4-5.5-7-6.1c-2.5-0.4-4.9-0.2-7.3,0.4c0,0.1,0.1,0.3,0.3,0.3c0.7,0.1,1.4,0.3,2.1,0.5 c2.4,0.8,4.3,2.1,5.2,4.6c0.8,2.2,1.1,4.4,1.2,6.7c0.1,1.7-0.2,3.4-0.5,5.1c-1,4.9-3.4,8.9-7.3,12c-0.5,0.4-1.1,1-1.4,1.3 c-0.3,0.1-0.6,0.2-0.9,0.3c0,0,0,0,0,0c1.7-0.3,4.3-1.1,5.8-1.8c0.3-0.1,0.6-0.2,0.8-0.4c0.3-0.2,0.6-0.3,0.9-0.5 c2.9-1.6,5.1-3.9,6.6-6.9c1.6-3.2,2.1-6.5,2.1-10.1C39.6,16.9,39.4,15.1,38.8,13.3z"/>
+          <path class="st0" d="M14.2,20.4c-1,0-1.9,0.8-1.9,1.7c0,0.9,0.9,1.7,1.9,1.7c1.1,0,2-0.8,2-1.7C16.1,21.2,15.2,20.4,14.2,20.4z"/>
+          <path class="st0" d="M27,20.4c-1.1,0-1.9,0.7-2,1.6c0,0.9,0.8,1.7,1.9,1.7c1,0,1.9-0.7,2-1.6C28.9,21.3,28,20.5,27,20.4z"/>
+          <path class="st2" d="M21.1,8.5c-0.7,0.2-1.5,0.2-2.2,0c0.5-2.9,1.8-5.3,4.5-6.8c0.3-0.2,0.6-0.3,1-0.3c0.4,0,0.7,0.3,0.9,0.6 c0.2,0.4,0,0.7-0.2,1c-0.1,0.1-0.2,0.2-0.3,0.3C22.6,4.4,21.6,6.2,21.1,8.5z"/>
+          <g>
+            <path class="st4" d="M5.1,18.1c0.9,0.1,1.5-0.5,1.7-1.5c0.2-1.5,0.8-2.8,2.1-3.7c0.9-0.6,1.1-1.3,0.7-2c-0.4-0.7-1.3-1-2.2-0.5 c-2.5,1.3-3.4,3.5-3.8,5.9C3.7,17.4,4.2,18,5.1,18.1z"/>
+            <path class="st4" d="M6.1,23c0.8-0.7,0.6-2.9-0.2-3.5c-0.5-0.4-1.1-0.3-1.6-0.1c-0.7,0.3-0.9,1-0.9,1.7c0.1,0.4,0.1,0.8,0.2,1.2 C3.9,23.4,5.2,23.7,6.1,23z"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="littleDot littleDotLast"></div>
+  </div>
+  <svg class="btn btnNext" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg" @click="transitionNext(Number('5'))">
+    <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+    <path d="M0-.25h24v24H0z" fill="none"/>
+  </svg>
+</div>
+        
+      </div>
+      <div v-else-if="currentCategory === '優惠活動'">
+        <div class="newsList">
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '0'">
+                
+                  <li>
+                    <a href="/Rinskings/%E5%85%AD%E9%80%B1%E5%B9%B4%EF%BC%81%E5%BA%97%E9%9D%A2%E6%B4%BB%E5%8B%95%E9%96%8B%E8%B7%91%EF%BC%81/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/promotions/20240402.jpg" alt="六週年！店面活動開跑！">
+                      </div>
+                      <div class="title">
+                        <h3>六週年！店面活動開跑！</h3>
+                        <div class="date">2024/4/2</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+        </div>
+        <!-- 頁數 -->
+        
+      </div>
+      <div v-else-if="currentCategory === '新品上市'">
+        <div class="newsList">
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '0'">
+                
+                  <li>
+                    <a href="/Rinskings/%E5%AD%A3%E7%AF%80%E9%99%90%E5%AE%9A%E3%80%8E%E6%B0%B4%E6%A2%A8%E8%8F%93%E8%8C%B6%E3%80%8F/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/newArrivals/20221005.jpg" alt="季節限定『水梨菓茶』">
+                      </div>
+                      <div class="title">
+                        <h3>季節限定『水梨菓茶』</h3>
+                        <div class="date">2022/10/5</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '1'">
+                
+                  <li>
+                    <a href="/Rinskings/%E3%80%8E%E5%A5%87%E7%95%B0%E8%8F%93%E8%8C%B6%E3%80%8F%EF%BC%8C%E7%82%8E%E5%A4%8F%E7%86%B1%E9%8A%B7%E6%8E%A8%E8%96%A6/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/newArrivals/20220408.jpg" alt="『奇異菓茶』，炎夏熱銷推薦">
+                      </div>
+                      <div class="title">
+                        <h3>『奇異菓茶』，炎夏熱銷推薦</h3>
+                        <div class="date">2022/4/8</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '2'">
+                
+                  <li>
+                    <a href="/Rinskings/%E7%A7%81%E6%88%BF%E9%99%90%E5%AE%9A%E3%80%8E%E8%8D%89%E8%8E%93%E9%9D%92%E9%A3%B2%E3%80%8F/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/newArrivals/20210208.jpg" alt="私房限定『草莓青飲』">
+                      </div>
+                      <div class="title">
+                        <h3>私房限定『草莓青飲』</h3>
+                        <div class="date">2021/2/8</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '3'">
+                
+                  <li>
+                    <a href="/Rinskings/%E3%80%8E%E7%99%BE%E9%A6%99%E9%9D%92%E9%A3%B2%E3%80%8F%E5%9B%9B%E5%AD%A3%E4%BE%9B%E6%87%89/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/newArrivals/20201020.jpg" alt="『百香青飲』四季供應">
+                      </div>
+                      <div class="title">
+                        <h3>『百香青飲』四季供應</h3>
+                        <div class="date">2020/10/20</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '4'">
+                
+                  <li>
+                    <a href="/Rinskings/%E3%80%8E%E9%87%91%E8%8A%92%E9%9D%92%E9%A3%B2%E3%80%8F%E7%8F%BE%E6%AD%A3%E7%86%B1%E8%B3%A3%E4%B8%AD/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/newArrivals/20200610.jpg" alt="『金芒青飲』現正熱賣中">
+                      </div>
+                      <div class="title">
+                        <h3>『金芒青飲』現正熱賣中</h3>
+                        <div class="date">2020/6/10</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+        </div>
+        <!-- 頁數 -->
+        
+          <div class="pagination" :class="{ 'transitionPrev': newsPrev, 'transitionNext': newsNext, 'prevEnd': prevNone, 'nextEnd': nextNone }">
+  <svg class="btn btnPrev" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg" @click="transitionPrev()">
+    <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
+    <path d="M0-.5h24v24H0z" fill="none"/>
+  </svg>
+  
+  <div class="paginationContainer">
+    <div class="littleDot littleDotFirst"></div>
+    <div class="littleDot">
+      <div class="bigDotContainer">
+        <svg version="1.1" class="bigDot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+          <path class="st0" d="M38.8,13.3c-1.1-3.4-3.4-5.5-7-6.1c-2.5-0.4-4.9-0.2-7.3,0.4c-1.2,0.2-2.2,0.7-3.4,0.8c-0.7,0.2-1.5,0.2-2.2,0 c-0.7,0-1.3-0.3-2-0.5c-2.5-0.7-5.1-1.1-7.7-0.9C5,7.4,2.1,9.9,1,13.9C0.1,17.3,0.3,20.7,0.9,24c1.1,5.6,4.1,9.7,9.3,12.2 c3.5,1.7,7.1,2.6,11,2.3c0.7,0,1.4,0,2.1-0.2c0,0,0,0,0,0c1.7-0.3,4.3-1.1,5.8-1.8c0.3-0.1,0.6-0.2,0.8-0.4c0.3-0.2,0.6-0.3,0.9-0.5 c2.9-1.6,5.1-3.9,6.6-6.9c1.6-3.2,2.1-6.5,2.1-10.1C39.6,16.9,39.4,15.1,38.8,13.3z"/>
+          <path class="st0" d="M22.2,25.9c0-0.9-0.1-1.8-0.7-2.5c-0.6-0.7-1.4-0.7-2,0c-1,1.2-1,3.6,0,4.8c0.7,0.8,1.5,0.8,2.1,0 C22,27.6,22.2,26.8,22.2,25.9z"/>
+          <path class="st1" d="M38.8,13.3c-1.1-3.4-3.4-5.5-7-6.1c-2.5-0.4-4.9-0.2-7.3,0.4c0,0.1,0.1,0.3,0.3,0.3c0.7,0.1,1.4,0.3,2.1,0.5 c2.4,0.8,4.3,2.1,5.2,4.6c0.8,2.2,1.1,4.4,1.2,6.7c0.1,1.7-0.2,3.4-0.5,5.1c-1,4.9-3.4,8.9-7.3,12c-0.5,0.4-1.1,1-1.4,1.3 c-0.3,0.1-0.6,0.2-0.9,0.3c0,0,0,0,0,0c1.7-0.3,4.3-1.1,5.8-1.8c0.3-0.1,0.6-0.2,0.8-0.4c0.3-0.2,0.6-0.3,0.9-0.5 c2.9-1.6,5.1-3.9,6.6-6.9c1.6-3.2,2.1-6.5,2.1-10.1C39.6,16.9,39.4,15.1,38.8,13.3z"/>
+          <path class="st0" d="M14.2,20.4c-1,0-1.9,0.8-1.9,1.7c0,0.9,0.9,1.7,1.9,1.7c1.1,0,2-0.8,2-1.7C16.1,21.2,15.2,20.4,14.2,20.4z"/>
+          <path class="st0" d="M27,20.4c-1.1,0-1.9,0.7-2,1.6c0,0.9,0.8,1.7,1.9,1.7c1,0,1.9-0.7,2-1.6C28.9,21.3,28,20.5,27,20.4z"/>
+          <path class="st2" d="M21.1,8.5c-0.7,0.2-1.5,0.2-2.2,0c0.5-2.9,1.8-5.3,4.5-6.8c0.3-0.2,0.6-0.3,1-0.3c0.4,0,0.7,0.3,0.9,0.6 c0.2,0.4,0,0.7-0.2,1c-0.1,0.1-0.2,0.2-0.3,0.3C22.6,4.4,21.6,6.2,21.1,8.5z"/>
+          <g>
+            <path class="st4" d="M5.1,18.1c0.9,0.1,1.5-0.5,1.7-1.5c0.2-1.5,0.8-2.8,2.1-3.7c0.9-0.6,1.1-1.3,0.7-2c-0.4-0.7-1.3-1-2.2-0.5 c-2.5,1.3-3.4,3.5-3.8,5.9C3.7,17.4,4.2,18,5.1,18.1z"/>
+            <path class="st4" d="M6.1,23c0.8-0.7,0.6-2.9-0.2-3.5c-0.5-0.4-1.1-0.3-1.6-0.1c-0.7,0.3-0.9,1-0.9,1.7c0.1,0.4,0.1,0.8,0.2,1.2 C3.9,23.4,5.2,23.7,6.1,23z"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="littleDot littleDotLast"></div>
+  </div>
+  <svg class="btn btnNext" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg" @click="transitionNext(Number('5'))">
+    <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+    <path d="M0-.25h24v24H0z" fill="none"/>
+  </svg>
+</div>
+        
+      </div>
+      <div v-else-if="currentCategory === '出攤資訊'">
+        <div class="newsList">
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '0'">
+                
+                  <li>
+                    <a href="/Rinskings/%E7%A5%9D%E5%85%A8%E5%A4%A9%E4%B8%8B%E5%AA%BD%E5%AA%BD%E2%9D%A4%EF%B8%8F%E6%AF%8D%E8%A6%AA%E7%AF%80%E5%BF%AB%E6%A8%82/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/officialAnnouncement/20200508.jpg" alt="祝全天下媽媽❤️母親節快樂">
+                      </div>
+                      <div class="title">
+                        <h3>祝全天下媽媽❤️母親節快樂</h3>
+                        <div class="date">2020/5/8</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+            <transition name="slide-fade">
+              <ul v-show="(vueCurrent - 1) == '1'">
+                
+                  <li>
+                    <a href="/Rinskings/%E4%B8%89%E6%9C%88%E5%87%BA%E6%94%A4%F0%9F%94%A5%E5%BC%98%E5%85%89%E7%A7%91%E5%A4%A7%E6%A0%A1%E5%9C%92%E5%B8%82%E9%9B%86/">
+                      <div class="img">
+                        <img src="/Rinskings/images/news/officialAnnouncement/20200303.jpg" alt="三月出攤🔥弘光科大校園市集">
+                      </div>
+                      <div class="title">
+                        <h3>三月出攤🔥弘光科大校園市集</h3>
+                        <div class="date">2020/3/3</div>
+                      </div>
+                    </a>
+                  </li>
+                
+              </ul>
+            </transition>
+          
+        </div>
+        <!-- 頁數 -->
+        
+          <div class="pagination" :class="{ 'transitionPrev': newsPrev, 'transitionNext': newsNext, 'prevEnd': prevNone, 'nextEnd': nextNone }">
+  <svg class="btn btnPrev" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg" @click="transitionPrev()">
+    <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
+    <path d="M0-.5h24v24H0z" fill="none"/>
+  </svg>
+  
+  <div class="paginationContainer">
+    <div class="littleDot littleDotFirst"></div>
+    <div class="littleDot">
+      <div class="bigDotContainer">
+        <svg version="1.1" class="bigDot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+          <path class="st0" d="M38.8,13.3c-1.1-3.4-3.4-5.5-7-6.1c-2.5-0.4-4.9-0.2-7.3,0.4c-1.2,0.2-2.2,0.7-3.4,0.8c-0.7,0.2-1.5,0.2-2.2,0 c-0.7,0-1.3-0.3-2-0.5c-2.5-0.7-5.1-1.1-7.7-0.9C5,7.4,2.1,9.9,1,13.9C0.1,17.3,0.3,20.7,0.9,24c1.1,5.6,4.1,9.7,9.3,12.2 c3.5,1.7,7.1,2.6,11,2.3c0.7,0,1.4,0,2.1-0.2c0,0,0,0,0,0c1.7-0.3,4.3-1.1,5.8-1.8c0.3-0.1,0.6-0.2,0.8-0.4c0.3-0.2,0.6-0.3,0.9-0.5 c2.9-1.6,5.1-3.9,6.6-6.9c1.6-3.2,2.1-6.5,2.1-10.1C39.6,16.9,39.4,15.1,38.8,13.3z"/>
+          <path class="st0" d="M22.2,25.9c0-0.9-0.1-1.8-0.7-2.5c-0.6-0.7-1.4-0.7-2,0c-1,1.2-1,3.6,0,4.8c0.7,0.8,1.5,0.8,2.1,0 C22,27.6,22.2,26.8,22.2,25.9z"/>
+          <path class="st1" d="M38.8,13.3c-1.1-3.4-3.4-5.5-7-6.1c-2.5-0.4-4.9-0.2-7.3,0.4c0,0.1,0.1,0.3,0.3,0.3c0.7,0.1,1.4,0.3,2.1,0.5 c2.4,0.8,4.3,2.1,5.2,4.6c0.8,2.2,1.1,4.4,1.2,6.7c0.1,1.7-0.2,3.4-0.5,5.1c-1,4.9-3.4,8.9-7.3,12c-0.5,0.4-1.1,1-1.4,1.3 c-0.3,0.1-0.6,0.2-0.9,0.3c0,0,0,0,0,0c1.7-0.3,4.3-1.1,5.8-1.8c0.3-0.1,0.6-0.2,0.8-0.4c0.3-0.2,0.6-0.3,0.9-0.5 c2.9-1.6,5.1-3.9,6.6-6.9c1.6-3.2,2.1-6.5,2.1-10.1C39.6,16.9,39.4,15.1,38.8,13.3z"/>
+          <path class="st0" d="M14.2,20.4c-1,0-1.9,0.8-1.9,1.7c0,0.9,0.9,1.7,1.9,1.7c1.1,0,2-0.8,2-1.7C16.1,21.2,15.2,20.4,14.2,20.4z"/>
+          <path class="st0" d="M27,20.4c-1.1,0-1.9,0.7-2,1.6c0,0.9,0.8,1.7,1.9,1.7c1,0,1.9-0.7,2-1.6C28.9,21.3,28,20.5,27,20.4z"/>
+          <path class="st2" d="M21.1,8.5c-0.7,0.2-1.5,0.2-2.2,0c0.5-2.9,1.8-5.3,4.5-6.8c0.3-0.2,0.6-0.3,1-0.3c0.4,0,0.7,0.3,0.9,0.6 c0.2,0.4,0,0.7-0.2,1c-0.1,0.1-0.2,0.2-0.3,0.3C22.6,4.4,21.6,6.2,21.1,8.5z"/>
+          <g>
+            <path class="st4" d="M5.1,18.1c0.9,0.1,1.5-0.5,1.7-1.5c0.2-1.5,0.8-2.8,2.1-3.7c0.9-0.6,1.1-1.3,0.7-2c-0.4-0.7-1.3-1-2.2-0.5 c-2.5,1.3-3.4,3.5-3.8,5.9C3.7,17.4,4.2,18,5.1,18.1z"/>
+            <path class="st4" d="M6.1,23c0.8-0.7,0.6-2.9-0.2-3.5c-0.5-0.4-1.1-0.3-1.6-0.1c-0.7,0.3-0.9,1-0.9,1.7c0.1,0.4,0.1,0.8,0.2,1.2 C3.9,23.4,5.2,23.7,6.1,23z"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="littleDot littleDotLast"></div>
+  </div>
+  <svg class="btn btnNext" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg" @click="transitionNext(Number('2'))">
+    <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+    <path d="M0-.25h24v24H0z" fill="none"/>
+  </svg>
+</div>
+        
+      </div>
+    </transition>
+  </div>
 </div>
 
+
+        
+          <footer>
+  <div class="container">
+    <div class="menu">
+      <ul class="list">
+        
+          <li>
+            <a href="/Rinskings/categories/allAnnouncements">最新消息</a>
+          </li>
+        
+          <li>
+            <a href="/Rinskings/brand">品牌故事</a>
+          </li>
+        
+          <li>
+            <a href="/Rinskings/menu">飲品菜單</a>
+          </li>
+        
+          <li>
+            <a href="/Rinskings/ingredients">嚴選食材</a>
+          </li>
+        
+          <li>
+            <a href="/Rinskings/stores">門市資訊</a>
+          </li>
+        
+          <li>
+            <a href="/Rinskings/contact">聯絡我們</a>
+          </li>
+        
+      </ul>
+      <div class="other">
+        <a class="fa-brands fa-facebook" href="https://www.facebook.com/Rinskings/?locale=zh_TW" target="_blank"></a>
+        <a class="fa-brands fa-instagram" href="https://www.instagram.com/rinskings_fruittea/" target="_blank"></a>
+      </div>
+    </div>
+    <div class="detail">
+      <div class="info">
+        <b>｜ 台中向上店 ｜</b>
+        <div class="address">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>台中市西區向上路一段99-3號</span>
+        </div>
+        <div class="businessHours">
+          <i class="fa-solid fa-clock"></i>
+          <span>週二至週日，11:00 - 20:00</span>
+        </div>
+        <div class="phone">
+          <i class="fa-solid fa-phone"></i>
+          <span>04-2301-6939</span>
+        </div>
+      </div>
+      <div class="info">
+        <b>｜ 審計新村攤位 ｜</b>
+        <div class="address">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>台中市西區民生路368巷1弄</span>
+        </div>
+        <div class="businessHours">
+          <i class="fa-solid fa-clock"></i>
+          <span>週一至週五，12:30 - 17:00</span>
+        </div>
+        <div class="holidayHours">
+          <span>週六、週日，10:30 - 18:30</span>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="copyright">
+      <div>
+        <span>
+          Copyright &copy; 2018 - 2024 Rinskings 芸蒔刻｜鮮果製茶園 . All rights reserved.
+        </span>
+      </div>
+      <div>
+        <span>統一編號｜82518398</span>
+      </div>
+    </div>
+  </div>
+</footer>
 
         
       </div>

@@ -33,6 +33,16 @@
   <meta name="generator" content="Hexo 7.3.0"></head>
   <body>
     <div id="layout">
+      <transition>
+        <div class="floatGroup">
+          <a class="panda" href="https://www.foodpanda.com.tw/restaurant/tz7z/rinskingsyun-shi-ke-xian-guo-zhi-cha-yuan" target="_blank">
+            <div class="img"></div>
+          </a>
+          <a class="uberEat" href="https://www.ubereats.com/tw/store/rinskings%E8%8A%B8%E8%92%94%E5%88%BB-%E9%AE%AE%E6%9E%9C%E8%A3%BD%E8%8C%B6%E5%9C%92/yPl-wBcHUAW8X6TiKiknpA?ps=1" target="_blank">
+            <div class="img"></div>
+          </a>
+        </div>
+      </transition>
       <transition name="fade">
         <div id="loading" v-show="loading">
   <div class="loadingImg">
@@ -110,17 +120,17 @@
     <transition name="slide">
       <div class="menu" v-show="showMenuItems">
         
-        <a href="/Rinskings/categories/allAnnouncements">最新消息</a>
+          <a href="/Rinskings/categories/allAnnouncements">最新消息</a>
         
-        <a href="/Rinskings/brand">品牌故事</a>
+          <a href="/Rinskings/brand">品牌故事</a>
         
-        <a href="/Rinskings/menu">飲品菜單</a>
+          <a href="/Rinskings/menu">飲品菜單</a>
         
-        <a href="/Rinskings/ingredients">嚴選食材</a>
+          <a href="/Rinskings/ingredients">嚴選食材</a>
         
-        <a href="/Rinskings/stores">門市資訊</a>
+          <a href="/Rinskings/stores">門市資訊</a>
         
-        <a href="/Rinskings/contact">聯絡我們</a>
+          <a href="/Rinskings/contact">聯絡我們</a>
         
       </div>
     </transition>
@@ -186,93 +196,105 @@
       <div class="area other">
         <ul class="topping">
           <h3 class="productTitle">料多多</h3>
-          <li>
-            <p>蘋果丁</p>
-            <p> + $5</p>
-          </li>
-          <li>
-            <p>芭樂丁</p>
-            <p> + $5</p>
-          </li>
-          <li>
-            <p>鳳梨丁</p>
-            <p> + $10</p>
-          </li>
+          <ol>
+            <li>
+              <p>蘋果丁</p>
+              <p> + $5</p>
+            </li>
+            <li>
+              <p>芭樂丁</p>
+              <p> + $5</p>
+            </li>
+            <li>
+              <p>鳳梨丁</p>
+              <p> + $10</p>
+            </li>
+          </ol>
         </ul>
         <ul class="capacity">
           <h3 class="productTitle">飲品容量</h3>
-          <li>
-            <b>中</b>
-            <span>520 ml</span>
-          </li>
-          <li>
-            <b>大</b>
-            <span>660 ml</span>
-          </li>
-          <li>
-            <b>瓶</b>
-            <span>520 ml</span>
-          </li>
+          <ol>
+            <li>
+              <b>中</b>
+              <span>520 ml</span>
+            </li>
+            <li>
+              <b>大</b>
+              <span>660 ml</span>
+            </li>
+            <li>
+              <b>瓶</b>
+              <span>520 ml</span>
+            </li>
+          </ol>
         </ul>
         <ul class="iconMean">
           <h3 class="productTitle">符號</h3>
-          <li>
-            <span class="rec">推</span>
-            <span>人氣飲品推薦</span>
-          </li>
-          <li>
-            <span class="hot">H</span>
-            <span>提供熱飲</span>
-          </li>
+          <ol>
+            <li>
+              <span class="rec">推</span>
+              <span>人氣飲品推薦</span>
+            </li>
+            <li>
+              <span class="hot">H</span>
+              <span>提供熱飲</span>
+            </li>
+          </ol>
         </ul>
       </div>
       <div class="area other">
         <ul class="customized">
           <h3 class="productTitle">幾分糖、多少冰</h3>
-          <li>
-            <p class="name">甜度</p>
-            <p>
-              <span>無糖 / 一分糖 / 微糖 / 少糖 / 全糖</span>
-            </p>
-          </li>
-          <li>
-            <p class="name">冰量</p>
-            <p>
-              <span>去冰 / 微冰 / 少冰 / 多冰 / 正常冰</span>
-            </p>
-          </li>
+          <ol>
+            <li>
+              <p class="name">甜度</p>
+              <p>
+                <span>無糖 / 一分糖 / 微糖 / 少糖 / 全糖</span>
+              </p>
+            </li>
+            <li>
+              <p class="name">冰量</p>
+              <p>
+                <span>去冰 / 微冰 / 少冰 / 多冰 / 正常冰</span>
+              </p>
+            </li>
+          </ol>
         </ul>
         <ul class="delivery">
           <h3 class="productTitle">想宅配</h3>
-          <li>
-            <p>未滿 9 瓶</p>
-            <p> + $160</p>
-          </li>
-          <li>
-            <p>任選 9 瓶</p>
-            <p>含運共計 $900</p>
-          </li>
-          <li>
-            <p>18 瓶以上</p>
-            <p>免運</p>
-          </li>
+          <ol>
+            <li>
+              <p>未滿 9 瓶</p>
+              <p> + $160</p>
+            </li>
+            <li>
+              <p>任選 9 瓶</p>
+              <p>含運共計 $900</p>
+            </li>
+            <li>
+              <p>18 瓶以上</p>
+              <p>免運</p>
+            </li>
+          </ol>
         </ul>
       </div>
       <div class="area other">
         <ul class="detailDesc">
           <h3 class="productTitle">其他</h3>
-          <li>
-            <i class="fa-solid fa-hashtag icon"></i>
-            <p>瓶裝可冷藏保存 2 ~ 3 天，開封後請盡快飲用</p>
-          </li>
-          <li>
-            <i class="fa-solid fa-hashtag icon"></i>
-            <p>如有大量訂單及企業包車活動需求，歡迎來電洽詢</p>
-          </li>
-          <li>
-            <i class="fa-solid fa-hashtag icon"></i>
-            <p>如以外送平台訂購，售價相對較高，實際售價仍依店面情況為主</p>
-          </li>
+          <ol>
+            <li>
+              <i class="fa-solid fa-hashtag icon"></i>
+              <p>瓶裝可冷藏保存 2 ~ 3 天，開封後請盡快飲用</p>
+            </li>
+            <li>
+              <i class="fa-solid fa-hashtag icon"></i>
+              <p>如有大量訂單及企業包車活動需求，歡迎來電洽詢</p>
+            </li>
+            <li>
+              <i class="fa-solid fa-hashtag icon"></i>
+              <p>如以外送平台訂購，售價相對較高，實際售價仍依店面情況為主</p>
+            </li>
+          </ol>
         </ul>
       </div>
     </section>
@@ -284,13 +306,6 @@
           <footer>
   <div class="container">
     <div class="menu">
-      <!-- <div class="logo">
-        <img src="/Rinskings/images/logo_w.png" alt="logo">
-        <div class="brand">
-          <div class="nameCh">芸蒔刻</div>
-          <div class="nameEn">Rinskings</div>
-        </div>
-      </div> -->
       <ul class="list">
         
           <li>

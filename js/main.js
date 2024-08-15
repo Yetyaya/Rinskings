@@ -78,15 +78,15 @@ const app = Vue.createApp({
         { name: '蜜香紅', category: { cn: '茶葉', en: 'Tea' }, desc: '茶湯呈蜜棗色，帶有濃濃果香，入口滑順回甘，清爽甘甜。', place: '阿里山茶區', img: 'tea1' },
         { name: '四季春', category: { cn: '茶葉', en: 'Tea' }, desc: '茶湯水色蜜綠澄清，香氣輕揚優雅、入口滋味甘醇濃郁，喉韻極佳，口齒生津。', place: '杉林溪茶區', img: 'tea2' },
         { name: '蘋果', category: { cn: '果物', en: 'Organic Fruits' }, desc: '味道甜美，口感爽脆，富含礦物質和維生素，是生活中常食用的水果之一。', place: '臺灣在地果園', img: 'fruit1' },
-        { name: '芭樂', category: { cn: '果物', en: 'Organic Fruits' }, desc: '營養價值極高，是臺灣常見水果裡的維生素Ｃ含量冠軍。膳食纖維含量高，屬於高鉀水果，有助於維持血壓的穩定，是非常好的保健水果。', place: '臺灣在地果園', img: 'fruit2' },
+        { name: '芭樂', category: { cn: '果物', en: 'Organic Fruits' }, desc: '營養價值極高，是臺灣常見水果裡的維生素Ｃ含量冠軍。膳食纖維含量高，有助於維持血壓的穩定，是非常好的保健水果。', place: '臺灣在地果園', img: 'fruit2' },
         { name: '金鑽鳳梨', category: { cn: '果物', en: 'Organic Fruits' }, desc: '打破以往鳳梨太酸的印象，為高糖度的鳳梨品種，入口細緻飽滿，清香酸甜，風味絕佳。', place: '臺灣在地果園', img: 'fruit3' },
         { name: '百香果', category: { cn: '果物', en: 'Organic Fruits' }, desc: '香氣濃郁，酸甜多汁，營養價值高，有維生素Ａ、Ｂ、Ｃ、鎂、磷、鐵、鋅等多種人體有益元素，固有「果汁之王」的美稱。', place: '臺灣在地果園', img: 'fruit4' },
-        { name: '火龍果', category: { cn: '果物', en: 'Organic Fruits' }, desc: '外表像是一團艷紅的火球而得名，蘊含「甜菜紅素」，甜度較高，果肉較柔軟，富含維生素、膳食纖維、有機酸、鉀、鐵、葉酸等礦物質、多酚類及花青素等植化素。', place: '臺灣在地果園', img: 'fruit5' },
+        { name: '火龍果', category: { cn: '果物', en: 'Organic Fruits' }, desc: '含「甜菜紅素」，甜度較高，果肉較柔軟，富含維生素、膳食纖維、有機酸、鉀、鐵、葉酸等礦物質、多酚類及花青素等植化素。', place: '臺灣在地果園', img: 'fruit5' },
         { name: '巨峰葡萄', category: { cn: '果物', en: 'Organic Fruits' }, desc: '是目前台灣生產、栽種面積最多的品種。果肉透明，肉質軟Ｑ而多汁，帶有草莓香味，風味香甜輕馥。', place: '臺灣在地果園', img: 'fruit6' },
-        { name: '檸檬', category: { cn: '果物', en: 'Organic Fruits' }, desc: '富含豐富的維生素C、纖維、維生素B1、維生素B2、果酸。有促進人體新陳代謝、提高免疫力、協助骨膠原生成，美白護膚等多種功效。', place: '臺灣在地果園', img: 'fruit7' },
+        { name: '檸檬', category: { cn: '果物', en: 'Organic Fruits' }, desc: '富含豐富的纖維、果酸、維生素C、維生素B1、維生素B2。有促進人體新陳代謝、提高免疫力、美白護膚等多種功效。', place: '臺灣在地果園', img: 'fruit7' },
         { name: '愛文芒果', category: { cn: '果物', en: 'Organic Fruits' }, desc: '果肉金黃，皮薄肉嫩，香味濃郁多汁，高甜又帶有點微酸滋味，十分香甜好吃，是人人皆知也最受歡迎的水果品種之一。', place: '臺灣在地果園', img: 'fruit8' },
-        { name: '西瓜', category: { cn: '果物', en: 'Organic Fruits' }, desc: '西瓜風味香甜，不含脂肪外，還富含維生素A、B、C，胡蘿蔔素、鉀及鐵等礦物質與水溶性纖維，果肉多汁細緻，清甜爽口，是夏日消暑解渴首選的水果之一。', place: '臺灣在地果園', img: 'fruit9' },
-        { name: '全脂鮮乳', category: { cn: '鮮乳', en: 'Whole Milk' }, desc: '台灣第一瓶榮獲國際雙保證的品牌，以極鮮溫控技術給予牧場直送般的新鮮，讓人喝了不自覺露出幸福滿意的笑容。', place: '福樂一番鮮', img: 'milk' }
+        { name: '西瓜', category: { cn: '果物', en: 'Organic Fruits' }, desc: '風味香甜，富含維生素A、B、C，胡蘿蔔素、鉀及鐵等礦物質與水溶性纖維，果肉多汁細緻，清甜爽口，是夏日消暑解渴首選的水果之一。', place: '臺灣在地果園', img: 'fruit9' },
+        { name: '鮮乳', category: { cn: '乳品', en: 'Whole Milk' }, desc: '台灣第一瓶榮獲國際雙保證的品牌，以極鮮溫控技術給予牧場直送般的新鮮，讓人喝了不自覺露出幸福滿意的笑容。', place: '福樂一番鮮', img: 'milk' }
       ],
       guest: {
         name: null,
@@ -101,7 +101,8 @@ const app = Vue.createApp({
         email: null,
         message: null
       },
-      sendEmailAnimate: false
+      sendEmailAnimate: false,
+      screenWidth: null
     }
   },
   created () {
@@ -110,6 +111,9 @@ const app = Vue.createApp({
     })
   },
   mounted () {
+    this.screenWidth = window.innerWidth
+    window.addEventListener('resize', this.handleResize)
+
     // scroll 動畫
     AOS.init({
       offset: 120,
@@ -153,6 +157,9 @@ const app = Vue.createApp({
     });
   },
   methods: {
+    handleResize() {
+      this.screenWidth = window.innerWidth;
+    },
     render () {
       for (let i of this.renderers) i();
     },
@@ -260,6 +267,13 @@ const app = Vue.createApp({
     }
   },
   watch: {
+    // screenWidth: {
+    //   handler(val) {
+    //     console.log("螢幕寬度為：" + val);
+    //   },
+    //   immediate: true,
+    //   deep: true
+    // },
     'guest.name'(val) {
       if (val === null) {
         this.formVerification.name = null
