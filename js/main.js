@@ -168,7 +168,6 @@ const app = Vue.createApp({
       let newScrollTop = document.documentElement.scrollTop;
       if (this.scrollTop < newScrollTop) {
         this.hiddenMenu = true;
-        this.showMenuItems = false;
       } else this.hiddenMenu = false;
       if (wrap) {
         if (newScrollTop <= window.innerHeight - 100) this.menuColor = true;
@@ -307,4 +306,4 @@ const app = Vue.createApp({
   },
 })
 
-app.mount('#layout')
+app.mount('body')
