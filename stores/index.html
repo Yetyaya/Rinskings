@@ -34,7 +34,7 @@
 
   <meta name="generator" content="Hexo 7.3.0"></head>
   <body>
-    <div id="layout" :class="{ 'screenFixed': showMenuItems }">
+    <div id="layout">
       <transition name="fade">
         <div id="loading" v-show="loading">
   <div class="loadingImg">
@@ -98,7 +98,7 @@
       </a>
     </div>
   </nav>
-  <nav id="mobileMenu">
+  <nav id="mobileMenu" :class="{ 'screenFixed': showMenuItems }">
     <div class="title container">
       <a class="logo" href="/Rinskings/">
         <span>RINSKINGS </span>
