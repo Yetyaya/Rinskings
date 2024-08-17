@@ -6,3 +6,9 @@
   --swiper-pagination-bullet-height: 12px;
   --swiper-pagination-bullet-horizontal-gap: 8px;
 }
+
+@media (max-width: 500px) {
+  :root {
+  --swiper-pagination-bottom: 40px;
+}
+}
