@@ -35,8 +35,8 @@ const app = Vue.createApp({
         }, {
           product: '純萃那提',
           drink: [
-            { name: '雪杉紅那提', priceM: 60, priceL: 65, priceB: 85, desc: '嚴選阿里山蜜香紅茶搭配香純鮮奶，絕對茶奶完美比例', rec: true, hot: true },
-            { name: '杉林青那提', priceM: 60, priceL: 65, priceB: 85, desc: '嚴選杉林溪四季春茶搭配香純鮮奶，絕對茶奶完美比例', rec: false, hot: true }
+            { name: '雪杉紅那提', priceM: 60, priceL: 70, priceB: 85, desc: '嚴選阿里山蜜香紅茶搭配香純鮮奶，絕對茶奶完美比例', rec: true, hot: true },
+            { name: '杉林青那提', priceM: 60, priceL: 70, priceB: 85, desc: '嚴選杉林溪四季春茶搭配香純鮮奶，絕對茶奶完美比例', rec: false, hot: true }
           ]
         }, {
           product: '鮮果特調',
